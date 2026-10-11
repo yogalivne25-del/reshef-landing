@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>תוכנית ליטיגציה מעשית לעורכי דין | בהנחיית עו"ד שי רשף</title>
+<meta name="description" content="תיק אזרחי אחד, מכתב התביעה ועד הסיכומים. חמישה מפגשים פרונטליים בקבוצה קטנה, בליווי ליטיגטור עם 20 שנות ניסיון. לעורכי דין עצמאיים בתחילת הדרך.">
+<meta property="og:title" content="להיכנס לאולם כמו ליטיגטור. כבר מהתיק הבא.">
+<meta property="og:description" content="תוכנית ליטיגציה מעשית לעורכי דין עצמאיים, בהנחיית עו״ד שי רשף.">
+<meta property="og:image" content="images/og.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<script>
+/* ============ הגדרות – למלא לפני עלייה לאוויר ============ */
+window.LP_CONFIG = {
+  webhookUrl: "",        // כתובת Google Apps Script / Make / Zapier שמקבלת את הלידים
+  metaPixelId: "",       // מזהה הפיקסל של מטא (מספר)
+  thankYouUrl: "thanks.html"
+};
+</script>
+
+<!-- Meta Pixel – נטען רק אם הוגדר מזהה -->
+<script>
+(function(){
+  var id = window.LP_CONFIG.metaPixelId;
+  if (!id) { window.fbq = function(){}; return; }
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', id); fbq('track', 'PageView');
+})();
+</script>
+
+<style>
+:root{
+  --navy:#0E1A2B; --navy-2:#16253B; --navy-line:#2E3E57;
+  --gold:#E0A43A; --gold-dark:#8A5A0E; --gold-soft:#FBF4E6;
+  --ink:#16202E; --muted:#3F4A5A; --muted-2:#5B6676;
+  --light:#F2F4F7; --line:#DDE2EA; --white:#FFFFFF; --on-dark:#C9D2DE;
+  --radius:16px; --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Heebo',system-ui,sans-serif;color:var(--ink);background:var(--white);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.dark{background:var(--navy);color:#F5F7FA}
+.gray{background:var(--light)}
+.eyebrow{font-weight:700;font-size:17px;color:var(--gold-dark)}
+.dark .eyebrow{color:var(--gold)}
+h2{font-weight:800;font-size:clamp(28px,4vw,46px);line-height:1.2}
+.lead{font-size:clamp(18px,2vw,20px);color:var(--muted);max-width:780px}
+.dark .lead{color:var(--on-dark)}
+.stack{display:flex;flex-direction:column;gap:14px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.card{padding:26px;border-radius:var(--radius);background:var(--light);display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:21px;font-weight:700;line-height:1.3}
+.card p{color:var(--muted)}
+.card.dark-card{background:var(--navy);color:#F5F7FA}
+.card.dark-card h3{color:var(--gold)} .card.dark-card p{color:var(--on-dark)}
+.dark .card{background:var(--navy-2)} .dark .card p{color:var(--on-dark)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 32px;border-radius:12px;background:var(--gold);color:var(--navy);font-weight:800;font-size:19px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(224,164,58,.35)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn.navy{background:var(--navy);color:#F5F7FA}
+.btn.navy:hover{box-shadow:0 8px 24px rgba(14,26,43,.3)}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+.micro{font-size:16px;color:var(--muted-2)}
+.dark .micro{color:#AEB9C8}
+
+/* placeholder לתמונות שעוד לא הועלו */
+.ph{background:repeating-linear-gradient(135deg,#E3E8EF 0 14px,#EDF0F4 14px 28px);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted-2);font-size:15px;padding:20px}
+.dark .ph{background:repeating-linear-gradient(135deg,#1B2C45 0 14px,#16253B 14px 28px);color:#8C9AAE}
+.ph::after{content:attr(data-label)}
+
+/* header */
+header{background:var(--navy);color:#F5F7FA;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--navy-line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{font-weight:800;font-size:20px;display:flex;align-items:center;gap:10px}
+.brand img{height:36px;width:auto}
+header .btn{min-height:44px;font-size:16px;padding:0 20px}
+
+/* hero */
+.hero{padding:64px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-self:flex-start;padding:7px 16px;border-radius:999px;border:1px solid #3A4A63;font-size:16px;font-weight:600;color:#D7DEE8}
+.hero h1{font-weight:900;font-size:clamp(38px,5.6vw,72px);line-height:1.06}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .sub{font-size:clamp(18px,2vw,22px);color:var(--on-dark);max-width:640px}
+.hero-media{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-badge{position:absolute;bottom:16px;right:16px;left:16px;background:rgba(14,26,43,.88);backdrop-filter:blur(6px);border:1px solid var(--navy-line);border-radius:14px;padding:14px 16px;font-size:16px;line-height:1.45}
+.hero-badge strong{display:block;font-size:18px;color:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.stat{padding:18px;border-radius:14px;background:var(--navy-2)}
+.stat b{display:block;font-weight:800;font-size:32px;color:var(--gold);line-height:1.1}
+.stat span{font-size:16px;color:#D7DEE8;line-height:1.4;display:block;margin-top:4px}
+
+/* steps */
+.steps{display:flex;flex-direction:column;gap:14px;counter-reset:s}
+.step{display:flex;gap:20px;align-items:flex-start;padding:22px;border-radius:14px;background:var(--light)}
+.step .n{flex:none;width:50px;height:50px;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px}
+.step:last-child .n{background:var(--gold);color:var(--navy)}
+.step h3{font-size:21px;font-weight:700}
+.step p{color:var(--muted)}
+
+/* compare */
+.table-wrap{overflow-x:auto;border-radius:var(--radius);background:#fff;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:17px}
+th,td{padding:16px 18px;text-align:right;vertical-align:top;border-bottom:1px solid #E3E8EF}
+thead th{background:var(--navy);color:#F5F7FA;font-weight:700;font-size:16px}
+thead th.us{background:var(--gold);color:var(--navy);font-weight:800}
+td{color:var(--muted)} td:first-child{font-weight:700;color:var(--ink)}
+td.us{background:var(--gold-soft);color:var(--ink);font-weight:700}
+tr:last-child td{border-bottom:0}
+.scroll-hint{display:none;font-size:15px;color:var(--muted-2)}
+
+/* instructor */
+.instructor{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:48px;align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:20px;overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mini-stats div{padding:16px;border-radius:12px;background:var(--light)}
+.mini-stats b{display:block;font-weight:800;font-size:26px;color:var(--gold-dark);line-height:1.2}
+.mini-stats span{font-size:15px;color:var(--muted)}
+.quote{padding:18px 22px;border-right:4px solid var(--gold);background:var(--gold-soft);font-size:19px;font-style:italic;border-radius:4px}
+
+/* fit */
+.fit .card{background:#fff;padding:30px}
+.fit ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.fit li{padding-right:30px;position:relative}
+.fit li::before{position:absolute;right:0;top:0;font-weight:800}
+.fit .yes li::before{content:"✓";color:#2E7D4F}
+.fit .no li::before{content:"✕";color:#B23B3B}
+.fit .no li{color:var(--muted)}
+
+/* testimonials */
+.tcard{padding:26px;border-radius:var(--radius);background:var(--light);display:flex;flex-direction:column;gap:14px}
+.tcard blockquote{margin:0;font-size:19px;line-height:1.65}
+.tcard cite{font-style:normal;font-weight:700;font-size:16px}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+details{background:#fff;border-radius:14px;margin-bottom:12px}
+summary{cursor:pointer;list-style:none;padding:22px 24px;font-weight:700;font-size:19px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;font-weight:400;color:var(--gold-dark);flex:none}
+details[open] summary::after{content:"–"}
+details p{padding:0 24px 22px;color:var(--muted)}
+
+/* form */
+.form-wrap{display:grid;grid-template-columns:1fr minmax(0,480px);gap:48px;align-items:start}
+form{position:relative;padding:30px;border-radius:18px;background:#fff;color:var(--ink);display:flex;flex-direction:column;gap:16px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:700;font-size:16px}
+.field input,.field select{min-height:50px;padding:0 14px;border-radius:10px;border:1px solid #B8C1CE;font-size:17px;font-family:inherit;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(224,164,58,.3)}
+.field.err input,.field.err select{border-color:#B23B3B}
+.field .msg{display:none;color:#B23B3B;font-size:14px}
+.field.err .msg{display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.consent{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.5;color:var(--muted)}
+.consent input{margin-top:5px;width:18px;height:18px;flex:none}
+.consent.err{color:#B23B3B}
+form .btn{width:100%;min-height:62px;font-size:20px}
+form .btn[disabled]{opacity:.6;cursor:wait;transform:none}
+.form-note{font-size:14px;color:var(--muted-2);text-align:center}
+.trust{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.trust div{display:flex;gap:10px;align-items:flex-start;color:var(--on-dark)}
+.trust div::before{content:"✓";color:var(--gold);font-weight:800}
+
+footer{background:#0A1422;color:#AEB9C8;padding:28px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer nav{display:flex;gap:18px}
+
+/* mobile sticky CTA */
+.sticky-cta{display:none}
+@media (max-width:860px){
+  section{padding:64px 0}
+  .hero{padding:40px 0 56px}
+  .hero .wrap,.instructor,.form-wrap{grid-template-columns:1fr}
+  .hero-media{aspect-ratio:16/11;max-height:300px}
+  .pill{font-size:14px;padding:6px 12px}
+  .hero-badge{display:none}
+  .stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .stat{padding:12px}
+  .stat b{font-size:24px}
+  .stat span{font-size:14px}
+  .portrait{max-width:360px}
+  .mini-stats{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .mini-stats div{padding:12px} .mini-stats b{font-size:20px}
+  .scroll-hint{display:block}
+  header .btn{display:none}
+  .two{grid-template-columns:1fr}
+  .sticky-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(14,26,43,.96);border-top:1px solid var(--navy-line);transition:transform .25s}
+  .sticky-cta .btn{width:100%;min-height:52px;font-size:18px}
+  .sticky-cta.hide{transform:translateY(110%)}
+  body{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.sticky-cta{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <!-- להחליף ללוגו: <img src="images/logo.svg" alt="שם המותג"> -->
+      <span>[שם המותג]</span>
+    </div>
+    <a class="btn" href="#form" data-cta="header">לשריון עדכון על המחזור</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="dark hero">
+  <div class="wrap">
+    <div class="stack" style="gap:24px">
+      <p class="pill">לעורכי דין עצמאיים בתחילת הדרך · 0–5 שנים</p>
+      <h1>להיכנס לאולם כמו <em>ליטיגטור</em>. כבר מהתיק הבא.</h1>
+      <p class="sub">התוכנית שעורכי דין מנוסים היו רוצים לקבל ביום הראשון שלהם באולם: תיק אזרחי אחד, מהפתיחה ועד הסיכומים. חמישה מפגשים פרונטליים בקבוצה קטנה, וליטיגטור עם 20 שנות ניסיון שמלווה אותך בכל שלב.</p>
+      <div class="cta-row">
+        <a class="btn" href="#form" data-cta="hero">אני רוצה לשמוע על המחזור הקרוב</a>
+        <p class="micro">ההשארה לא מחייבת · המקומות במחזור מוגבלים</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>תיק שלם, מכתב התביעה ועד הסיכומים</span></div>
+        <div class="stat"><b>5</b><span>מפגשים פרונטליים של 2–3 שעות</span></div>
+        <div class="stat"><b>20</b><span>משתתפים לכל היותר, משוב אישי לכל אחד</span></div>
+      </div>
+    </div>
+    <div class="hero-media ph" data-label="[תמונה: שי בפעולה · images/shai-hero.jpg]">
+      <img src="images/shai-hero.jpg" alt="עו״ד שי רשף" onerror="this.remove()" fetchpriority="high">
+      <div class="hero-badge"><strong>עו"ד שי רשף</strong>מייסד שי רשף ושות׳ · ליטיגטור פעיל מאז 2006</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAINS -->
+<section>
+  <div class="wrap stack" style="gap:36px">
+    <div class="stack">
+      <h2>אם אחד מהרגעים האלה מוכר לך, התוכנית הזאת נבנתה בשבילך</h2>
+      <p class="lead">באולם יש לך הזדמנות אחת. אין חזרות, ואין "נתקן בדיון הבא". ורוב עורכי הדין הצעירים מגיעים לשם בלי שתרגלו את זה אף פעם.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>בלקאאוט מול השופט</h3><p>שאלה אחת שלא ציפית לה, לחץ, והראש מתרוקן. ואתה מדפדף בתיק מול הלקוח ומול הצד השני.</p></div>
+      <div class="card"><h3>נצמד לדף</h3><p>קורא את הטיעון במקום לטעון אותו. נוקשה כשצריך להקשיב, ותוקפני ברגע הלא נכון.</p></div>
+      <div class="card"><h3>חקירה נגדית שהתהפכה</h3><p>שאלה אחת יותר מדי, והעד יצא מחוזק. בדיוק ההפך ממה שתכננת.</p></div>
+      <div class="card"><h3>לבד, בלי שותף בכיר</h3><p>אין מי שיעבור לך על כתב התביעה, ואין מי שיגיד לך מה עשית לא נכון אחרי הדיון.</p></div>
+      <div class="card"><h3>לומד על חשבון הלקוחות</h3><p>כל טעות היא שיעור, אבל הלקוח משלם עליו. ועוברות שנים של ניסוי וטעייה עד שמרגישים בבית באולם.</p></div>
+      <div class="card dark-card"><h3>מוריד מחיר כי לא בטוח</h3><p>לקוח שואל כמה זה יעלה, ואתה נותן הנחה עוד לפני שביקש. כי בפנים אתה לא בטוח שתנצח.</p></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn navy" href="#form" data-cta="pains">זה בדיוק אני. ספרו לי עוד</a>
+      <p class="micro">לוקח 20 שניות, לא מחייב</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section style="padding-top:0">
+  <div class="wrap stack" style="gap:32px">
+    <div class="stack">
+      <p class="eyebrow">הפתרון</p>
+      <h2>לא עוד השתלמות. מנהלים תיק שלם, בחמישה מפגשים.</h2>
+      <p class="lead">רוב הקורסים מלמדים על ליטיגציה. כאן עושים ליטיגציה: מקבלים תיק אזרחי אחד ומנהלים אותו מהיום הראשון ועד הסיכומים, עם משוב אישי על כל צעד. מה שמבדיל עו"ד צעיר מליטיגטור מנוסה הוא מספר המצבים שכבר פגש באולם, וכאן פוגשים אותם מראש.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h3>ניתוח התיק ובניית אסטרטגיה</h3><p>איך קוראים תיק, מזהים נקודות כוח וחולשה ומחליטים לאן הולכים. זה החלק שהלקוח לא רואה, והוא שקובע את התוצאה.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>כתבי טענות והליכים מקדמיים</h3><p>כותבים, מקבלים משוב אישי, ומבינים מה השופט באמת קורא ועל מה הוא מדלג.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>קדם משפט וניהול הדיון</h3><p>איך מתנהלים מול השופט, עונים על שאלה לא צפויה בלי לקפוא, ומחזיקים את הקו גם תחת לחץ.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>חקירות עדים: ראשית ונגדית</h3><p>סימולציה חיה מול המנטור: מתי לשאול, מתי לעצור, ואיך לא להפוך עד לבעל ברית של הצד השני.</p></div></div>
+      <div class="step"><div class="n">5</div><div><h3>סיכומים ו"משפט" מלא</h3><p>מסכמים בכתב ובעל פה, ומציגים את כל התיק, מההתחלה ועד הסוף, מול המנטור. כמו באולם.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COST -->
+<section class="dark">
+  <div class="wrap stack" style="gap:30px">
+    <h2 style="max-width:860px">ביטחון באולם הוא לא עניין של אופי. הוא עניין של הכנה.</h2>
+    <p class="lead">עו"ד עצמאי לא מקבל הכשרה מסודרת משותף בכיר. והמחיר מצטבר בשלושה מקומות:</p>
+    <div class="grid">
+      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">תיקים שהולכים לאיבוד</h3><p>החלטות קטנות בתחילת התיק קובעות איך הוא ייגמר. מי שלא רואה את כל התמונה מפסיד גם תיקים טובים.</p></div>
+      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">שכר טרחה נמוך מדי</h3><p>מי שלא בטוח בעצמו לא מצליח לגבות את מה שהוא שווה.</p></div>
+      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">משרד שלא צומח</h3><p>בלי תוצאות באולם אין המלצות, ובלי המלצות אין תיקים חדשים.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="gray">
+  <div class="wrap stack" style="gap:28px">
+    <div class="stack">
+      <h2>למה לא עוד קורס או השתלמות</h2>
+      <p class="lead">יש לא מעט דרכים ללמוד ליטיגציה. ההבדל הוא בשאלה אחת: יצאת עם ידע, או עם ניסיון?</p>
+    </div>
+    <p class="scroll-hint">← גללו הצידה להשוואה המלאה</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>השתלמות של יום</th><th>קורס מרוכז של כמה ימים</th><th>שיעורים פרטיים</th><th class="us">התוכנית שלנו</th></tr></thead>
+        <tbody>
+          <tr><td>מה עושים</td><td>שומעים הרצאה</td><td>הרצאות ויום סימולציות</td><td>תרגול אישי</td><td class="us">מנהלים תיק שלם</td></tr>
+          <tr><td>רצף</td><td>מפגש אחד</td><td>כמה ימים ברצף</td><td>לאורך זמן</td><td class="us">5 מפגשים, כל אחד בונה על הקודם</td></tr>
+          <tr><td>מי מלמד</td><td>מרצה אחד</td><td>מרצים מתחלפים</td><td>מורה אחד</td><td class="us">ליטיגטור אחד עם 20 שנות ניסיון, לאורך כל הדרך</td></tr>
+          <tr><td>לומדים גם מאחרים</td><td>מעט</td><td>בקבוצה גדולה</td><td>לא</td><td class="us">קבוצה של עד 20 עמיתים</td></tr>
+          <tr><td>נבנה בשביל</td><td>כל עורכי הדין</td><td>כל עורכי הדין</td><td>מי שיכול להרשות לעצמו</td><td class="us">עו"ד עצמאי בתחילת הדרך</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLBOX -->
+<section class="dark">
+  <div class="wrap stack" style="gap:32px">
+    <div class="stack">
+      <p class="eyebrow">מה תיקח איתך לכל תיק</p>
+      <h2 style="max-width:860px">ארגז כלים לכל שלב בניהול התיק, לכל אורך הקריירה.</h2>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>שיטה לכל תיק</h3><p>דרך מסודרת לנתח תיק ולבנות אסטרטגיה, מהפגישה הראשונה עם הלקוח.</p></div>
+      <div class="card"><h3>ניסיון, לא רק ידע</h3><p>חקירה נגדית, טיעון וסיכומים שכבר עשית, ולא רק שמעת עליהם.</p></div>
+      <div class="card"><h3>שקט באולם</h3><p>כשהשופט מפתיע, אתה יודע מה לעשות, כי כבר היית שם.</p></div>
+      <div class="card"><h3>יוזמה באולם</h3><p>איך לוקחים את ההובלה ומוציאים את הצד השני משיווי משקל, במקום רק להגיב.</p></div>
+      <div class="card"><h3>ביטחון לתמחר</h3><p>כשאתה יודע מה אתה עושה, קל יותר לבקש את מה שאתה שווה.</p></div>
+    </div>
+    <div class="cta-row"><a class="btn" href="#form" data-cta="toolbox">אני רוצה לשמוע על המחזור הקרוב</a></div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section>
+  <div class="wrap instructor">
+    <div class="portrait ph" data-label="[פורטרט של שי · אנכי 4:5 · images/shai-portrait.jpg]">
+      <img src="images/shai-portrait.jpg" alt="עו״ד שי רשף" loading="lazy" onerror="this.remove()">
+    </div>
+    <div class="stack" style="gap:18px">
+      <p class="eyebrow">מי מלווה אותך</p>
+      <h2>עו"ד שי רשף. 20 שנה באולם, בצד שצריך לנצח.</h2>
+      <p class="lead">שי מייסד ומנהל את משרד שי רשף ושות׳ בתל אביב, ומופיע בבתי המשפט מאז 2006. הוא מטפל בסכסוכים עסקיים, בסכסוכי שותפים ובייצוג מעסיקים בבתי הדין לעבודה, ויודע אילו מהלכים מכריעים תיק בכל שלב: תביעות ובוררויות, צווי מניעה וסעדים זמניים, משא ומתן וגישור.</p>
+      <p class="lead">את הקורס הוא מעביר בעצמו, מהמפגש הראשון ועד האחרון. אין מרצים מתחלפים ואין הקלטות, רק מנטור אחד שמכיר אותך, את התיק שלך ואת הנקודות שאתה צריך לחזק.</p>
+      <div class="mini-stats">
+        <div><b>2006</b><span>מופיע באולם מאז</span></div>
+        <div><b>מסחרי</b><span>עסקים, שותפים, עבודה</span></div>
+        <div><b>עד 20</b><span>משתתפים במחזור</span></div>
+      </div>
+      <p class="quote">"[משפט אחד של שי בגוף ראשון: מה הוא רואה אצל עורכי דין צעירים באולם, ולמה הקים את הקורס.]"</p>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="gray fit">
+  <div class="wrap grid">
+    <div class="card yes"><h2 style="font-size:28px">התוכנית בשבילך אם</h2>
+      <ul><li>אתה עורך דין עצמאי, בוותק של עד 5 שנים</li><li>אתה עוסק בתחום האזרחי ורוצה להופיע יותר באולם</li><li>אתה רוצה לגבות יותר, כי אתה יודע מה אתה עושה</li></ul>
+    </div>
+    <div class="card no"><h2 style="font-size:28px">פחות מתאימה אם</h2>
+      <ul><li>אתה עוסק בעיקר בפלילים או בנזיקין</li><li>אתה עדיין סטודנט או מתמחה</li><li>אתה מחפש הרצאה, לא עבודה מעשית</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS – להסתיר עד שיש המלצות אמיתיות: להוסיף hidden ל-section -->
+<section id="testimonials">
+  <div class="wrap stack" style="gap:28px">
+    <h2>עורכי דין שעבדו עם שי</h2>
+    <div class="grid">
+      <div class="tcard"><blockquote>"[ציטוט של עו"ד שהוא ליווה: מה השתנה אצלו באולם.]"</blockquote><cite>עו"ד [שם מלא] · [ותק] · [תחום]</cite></div>
+      <div class="tcard"><blockquote>"[ציטוט שני, רצוי עם תוצאה מוחשית.]"</blockquote><cite>עו"ד [שם מלא] · [ותק] · [תחום]</cite></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="gray">
+  <div class="wrap faq">
+    <h2 style="margin-bottom:28px">שאלות שעולות</h2>
+    <details><summary>אחרי התוכנית אדע לייצג?</summary><p>התוכנית בנויה כך שכל שלב מתרגלים על תיק שלם, עם משוב אישי. כשתגיע לתיק האמיתי הבא שלך, כבר עברת את כל הדרך הזאת פעם אחת.</p></details>
+    <details><summary>כבר עשיתי השתלמות בליטיגציה. מה שונה כאן?</summary><p>השתלמות נותנת ידע. כאן מנהלים תיק אחד מההתחלה ועד הסוף, עם אותו מנטור לאורך כל הדרך ובקבוצה קטנה. יוצאים עם ניסיון.</p></details>
+    <details><summary>יש לי פחד במה. אצטרך לעמוד מול כולם?</summary><p>כן, ובדיוק בגלל זה. עדיף לטעות מול המנטור והקבוצה מאשר מול הצד השני באולם.</p></details>
+    <details><summary>כמה זמן זה דורש?</summary><p>חמישה מפגשים של 2–3 שעות, במרכז. [ימים ושעות]</p></details>
+    <details><summary>אפשר להשתתף בזום?</summary><p>המפגשים פרונטליים, כי הסימולציות עובדות הכי טוב בחדר. במקרה חריג אפשר להצטרף בזום.</p></details>
+    <details><summary>מתי המחזור הבא ומה העלות?</summary><p>השאירו פרטים, ונעדכן אתכם על המועד ועל כל הפרטים כשההרשמה למחזור תיפתח.</p></details>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="form" class="dark">
+  <div class="wrap form-wrap">
+    <div class="stack" style="gap:18px">
+      <h2 style="font-weight:900;font-size:clamp(32px,4.5vw,52px);line-height:1.12">התיק הבא שלך יכול להיראות אחרת.</h2>
+      <p class="lead">במחזור יש עד 20 משתתפים, כדי שכל אחד יקבל משוב אישי. השאירו פרטים ותהיו הראשונים לשמוע כשההרשמה נפתחת.</p>
+      <div class="trust">
+        <div>בלי התחייבות ובלי תשלום בשלב הזה</div>
+        <div>עדכון ראשון על מועדים ומקומות פנויים</div>
+        <div>לא נעביר את הפרטים שלך לאף אחד</div>
+      </div>
+    </div>
+
+    <form id="lead-form" novalidate>
+      <div class="field"><label for="f-name">שם מלא</label><input id="f-name" name="name" type="text" autocomplete="name" required><span class="msg">נא למלא שם מלא</span></div>
+      <div class="field"><label for="f-phone">טלפון נייד</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-0000000" required><span class="msg">נא למלא מספר נייד תקין</span></div>
+      <div class="field"><label for="f-email">אימייל</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="msg">נא למלא כתובת אימייל תקינה</span></div>
+      <div class="two">
+        <div class="field"><label for="f-years">ותק</label><select id="f-years" name="years" required><option value="" disabled selected>בחרו</option><option>עד שנה</option><option>1–3 שנים</option><option>3–5 שנים</option><option>מעל 5 שנים</option></select><span class="msg">נא לבחור</span></div>
+        <div class="field"><label for="f-field">תחום עיקרי</label><select id="f-field" name="practice" required><option value="" disabled selected>בחרו</option><option>אזרחי / מסחרי</option><option>משפחה</option><option>עבודה</option><option>מקרקעין</option><option>אחר</option></select><span class="msg">נא לבחור</span></div>
+      </div>
+      <label class="consent" id="consent-wrap"><input type="checkbox" id="f-consent" name="consent"> אני מאשר/ת לקבל עדכונים במייל, בוואטסאפ וב־SMS. אפשר להסיר בכל עת.</label>
+      <!-- honeypot נגד בוטים -->
+      <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden;clip-path:inset(50%)" aria-hidden="true">
+      <button class="btn" type="submit" id="submit-btn">שמרו לי עדכון על המחזור הקרוב</button>
+      <p class="form-note">ההשארה לא מחייבת לשום דבר</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>[שם המותג] · תוכנית ליטיגציה מעשית לעורכי דין · בהנחיית עו"ד שי רשף</p>
+    <nav><a href="privacy.html">מדיניות פרטיות</a><a href="accessibility.html">הצהרת נגישות</a></nav>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky"><a class="btn" href="#form" data-cta="sticky">אני רוצה לשמוע על המחזור</a></div>
+
+<script>
+(function(){
+  // --- UTM / מקור התנועה ---
+  var qs = new URLSearchParams(location.search);
+  var keys = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid"];
+  var attribution = {};
+  try {
+    var saved = JSON.parse(sessionStorage.getItem("lp_attr") || "{}");
+    keys.forEach(function(k){ attribution[k] = qs.get(k) || saved[k] || ""; });
+    sessionStorage.setItem("lp_attr", JSON.stringify(attribution));
+  } catch(e){ keys.forEach(function(k){ attribution[k] = qs.get(k) || ""; }); }
+
+  // --- מעקב לחיצות על CTA ---
+  document.querySelectorAll("[data-cta]").forEach(function(a){
+    a.addEventListener("click", function(){ fbq("trackCustom","CTAClick",{position:a.dataset.cta}); });
+  });
+
+  // --- כפתור דביק במובייל: נעלם כשהטופס על המסך ---
+  var sticky = document.getElementById("sticky"), formSec = document.getElementById("form");
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function(es){ es.forEach(function(e){ sticky.classList.toggle("hide", e.isIntersecting); }); },{threshold:0.1}).observe(formSec);
+  }
+
+  // --- טופס ---
+  var form = document.getElementById("lead-form"), btn = document.getElementById("submit-btn");
+  var started = false;
+  form.addEventListener("focusin", function(){ if(!started){ started = true; fbq("trackCustom","FormStart"); } });
+
+  function setErr(el, bad){ el.closest(".field").classList.toggle("err", bad); return !bad; }
+  function normPhone(v){ return v.replace(/[\s\-()]/g,"").replace(/^\+972/,"0").replace(/^972/,"0"); }
+
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    if (form.company.value) return; // בוט
+    var ok = true;
+    ok = setErr(form.name, form.name.value.trim().length < 2) && ok;
+    var phone = normPhone(form.phone.value);
+    ok = setErr(form.phone, !/^05\d{8}$/.test(phone)) && ok;
+    ok = setErr(form.email, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.value.trim())) && ok;
+    ok = setErr(form.years, !form.years.value) && ok;
+    ok = setErr(form.practice, !form.practice.value) && ok;
+    var consent = document.getElementById("f-consent").checked;
+    document.getElementById("consent-wrap").classList.toggle("err", !consent);
+    ok = consent && ok;
+    if (!ok) { var first = form.querySelector(".err input, .err select, .consent.err input"); if(first) first.focus(); return; }
+
+    btn.disabled = true; btn.textContent = "שולח…";
+    var eventId = "lead_" + Date.now() + "_" + Math.random().toString(36).slice(2,8);
+    var payload = Object.assign({
+      name: form.name.value.trim(), phone: phone, email: form.email.value.trim(),
+      years: form.years.value, practice: form.practice.value, consent: "yes",
+      page: location.href.split("?")[0], referrer: document.referrer,
+      submitted_at: new Date().toISOString(), event_id: eventId
+    }, attribution);
+
+    var done = function(){
+      fbq("track","Lead",{content_name:"litigation-course-waitlist"},{eventID:eventId});
+      setTimeout(function(){ location.href = window.LP_CONFIG.thankYouUrl; }, 300);
+    };
+    var url = window.LP_CONFIG.webhookUrl;
+    if (!url) { console.warn("LP_CONFIG.webhookUrl לא מוגדר – הליד לא נשמר", payload); done(); return; }
+    // text/plain מונע preflight של CORS – עובד עם Google Apps Script
+    fetch(url, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload)})
+      .then(done)
+      .catch(function(){ btn.disabled = false; btn.textContent = "שמרו לי עדכון על המחזור הקרוב"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); });
+  });
+
+  ["input","change"].forEach(function(t){ form.addEventListener(t, function(e){ var f = e.target.closest(".field"); if (f) f.classList.remove("err"); if (e.target.id==="f-consent") document.getElementById("consent-wrap").classList.remove("err"); }); });
+})();
+</script>
+</body>
+</html>
