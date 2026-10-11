@@ -235,7 +235,7 @@ footer nav{display:flex;gap:18px}
       <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.25" stroke="currentColor" stroke-width="1.5"/><path d="M12 15.5 24 10l12 5.5z" fill="currentColor"/><rect x="13" y="16.5" width="22" height="2" rx=".5" fill="currentColor"/><path d="M17 20.5v11.5M21.7 20.5v11.5M26.3 20.5v11.5M31 20.5v11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="13" y="33.5" width="22" height="2" rx=".5" fill="currentColor"/><rect x="11" y="37" width="26" height="1.6" rx=".5" fill="currentColor"/></svg>
       <span><b>ליטיגטור</b><small>קורס ליטיגציה מעשית</small></span>
     </a>
-    <a class="btn" href="#form" data-cta="header">לשריון עדכון על המחזור</a>
+    <a class="btn" href="#form" data-cta="header">לכל הפרטים</a>
   </div>
 </header>
 
@@ -249,7 +249,7 @@ footer nav{display:flex;gap:18px}
       <h1>להיכנס לאולם בביטחון של <em>ליטיגטור מנוסה</em>. כבר מהתיק הבא.</h1>
       <p class="sub">תוכנית מעשית שעוברת על כל שלבי התיק, מכתב התביעה ועד הסיכומים. חמישה מפגשים פרונטליים בקבוצה קטנה, וליטיגטור עם 20 שנות ניסיון שמלווה אותך בכל שלב.</p>
       <div class="cta-row">
-        <a class="btn" href="#form" data-cta="hero">אני רוצה לשמוע על המחזור הקרוב</a>
+        <a class="btn" href="#form" data-cta="hero">אני רוצה את כל הפרטים</a>
         <p class="micro">מספר המקומות במחזור מוגבל, כדי לתת קשב מקסימלי לכל משתתף</p>
       </div>
       <div class="stats">
@@ -355,7 +355,7 @@ footer nav{display:flex;gap:18px}
       <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M9 5h10v10"/></svg></span><h3>יוזמה באולם</h3><p>איך לוקחים את ההובלה ומוציאים את הצד השני משיווי משקל, במקום רק להגיב.</p></div>
       <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span><h3>ביטחון לתמחר</h3><p>כשאתה יודע מה אתה עושה, קל יותר לבקש את מה שאתה שווה.</p></div>
     </div>
-    <div class="cta-row"><a class="btn" href="#form" data-cta="toolbox">אני רוצה לשמוע על המחזור הקרוב</a></div>
+    <div class="cta-row"><a class="btn" href="#form" data-cta="toolbox">אני רוצה את כל הפרטים</a></div>
   </div>
 </section>
 
@@ -444,7 +444,7 @@ footer nav{display:flex;gap:18px}
       <label class="consent" id="consent-wrap"><input type="checkbox" id="f-consent" name="consent"> אני מאשר/ת לקבל עדכונים במייל, בוואטסאפ וב־SMS. אפשר להסיר בכל עת.</label>
       <!-- honeypot נגד בוטים -->
       <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden;clip-path:inset(50%)" aria-hidden="true">
-      <button class="btn" type="submit" id="submit-btn">שמרו לי עדכון על המחזור הקרוב</button>
+      <button class="btn" type="submit" id="submit-btn">שלחו לי את כל הפרטים</button>
       <p class="form-note">ההשארה לא מחייבת לשום דבר</p>
     </form>
   </div>
@@ -459,7 +459,7 @@ footer nav{display:flex;gap:18px}
   </div>
 </footer>
 
-<div class="sticky-cta" id="sticky"><a class="btn" href="#form" data-cta="sticky">אני רוצה לשמוע על המחזור</a></div>
+<div class="sticky-cta" id="sticky"><a class="btn" href="#form" data-cta="sticky">אני רוצה את כל הפרטים</a></div>
 
 <script>
 (function(){
@@ -525,7 +525,7 @@ footer nav{display:flex;gap:18px}
     // text/plain מונע preflight של CORS – עובד עם Google Apps Script
     fetch(url, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload)})
       .then(done)
-      .catch(function(){ btn.disabled = false; btn.textContent = "שמרו לי עדכון על המחזור הקרוב"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); });
+      .catch(function(){ btn.disabled = false; btn.textContent = "שלחו לי את כל הפרטים"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); });
   });
 
   ["input","change"].forEach(function(t){ form.addEventListener(t, function(e){ var f = e.target.closest(".field"); if (f) f.classList.remove("err"); if (e.target.id==="f-consent") document.getElementById("consent-wrap").classList.remove("err"); }); });
