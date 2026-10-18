@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ליטיגטור | קורס ליטיגציה מעשית לעורכי דין, בהנחיית עו"ד שי רשף</title>
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-<meta name="description" content="כל שלבי התיק, מכתב התביעה ועד הסיכומים. חמישה מפגשים פרונטליים בקבוצה קטנה, בליווי ליטיגטור עם 20 שנות ניסיון. לעורכי דין עצמאיים שרוצים להגיע לכל דיון מוכנים.">
+<meta name="description" content="כל שלבי התיק, מניתוח התיק ועד חקירת העדים. חמישה מפגשים בקבוצה קטנה, עם ליטיגטור עם 20 שנות ניסיון. כלים פרקטיים שאפשר להשתמש בהם כבר למחרת.">
 <meta property="og:title" content="להיכנס לאולם בביטחון של ליטיגטור מנוסה.">
 <meta property="og:description" content="תוכנית ליטיגציה מעשית לעורכי דין עצמאיים, בהנחיית עו״ד שי רשף.">
 <meta property="og:image" content="images/og.jpg">
@@ -163,6 +163,9 @@ tr:last-child td{border-bottom:0}
 .step{background:none;padding:0 0 30px;position:relative}
 .step:not(:last-child)::before{content:"";position:absolute;right:24px;top:56px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--line))}
 .step .n{box-shadow:0 0 0 6px var(--white)}
+.step ul{margin:10px 0 0;padding:0 20px 0 0;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.step li::marker{color:var(--gold-dark)}
+.step p{color:var(--ink);font-weight:500}
 /* courtroom backdrop */
 .court{background:linear-gradient(270deg,rgba(14,26,43,.97) 40%,rgba(14,26,43,.72)),url(images/courtroom-bg.jpg) left center/cover no-repeat,var(--navy)}
 /* faq */
@@ -247,20 +250,20 @@ footer nav{display:flex;gap:18px}
     <div class="stack" style="gap:24px">
       <p class="pill">לעורכי דין שרוצים להגיע לכל דיון עם ארגז כלים חזק</p>
       <h1>להיכנס לאולם בביטחון של <em>ליטיגטור מנוסה</em>. כבר מהתיק הבא.</h1>
-      <p class="sub">תוכנית מעשית שעוברת על כל שלבי התיק, מכתב התביעה ועד הסיכומים. חמישה מפגשים פרונטליים בקבוצה קטנה, וליטיגטור עם 20 שנות ניסיון שמלווה אותך בכל שלב.</p>
+      <p class="sub">לוקחים כל שלב בתיק ויוצאים עם כלים פרקטיים שאפשר להשתמש בהם כבר למחרת. ליטיגטור עם 20 שנות ניסיון מעביר לך את כל מה שהוא יודע, בקבוצה קטנה.</p>
       <div class="cta-row">
         <a class="btn" href="#form" data-cta="hero">אני רוצה את כל הפרטים</a>
         <p class="micro">מספר המקומות במחזור מוגבל, כדי לתת קשב מקסימלי לכל משתתף</p>
       </div>
       <div class="stats">
-        <div class="stat"><b>5</b><span>מפגשים פרונטליים בקבוצה קטנה</span></div>
-        <div class="stat"><b>2.5</b><span>שעות לכל מפגש, עם תרגול ומשוב</span></div>
-        <div class="stat"><b>20</b><span>משתתפים לכל היותר, משוב אישי לכל אחד</span></div>
+        <div class="stat"><b>4</b><span>שלבים, מניתוח התיק ועד חקירת עדים</span></div>
+        <div class="stat"><b>5</b><span>מפגשים: 3 פרונטליים ו-2 בזום</span></div>
+        <div class="stat"><b>20</b><span>שנות ניסיון בליטיגציה מסחרית</span></div>
       </div>
     </div>
     <div class="hero-media ph" data-label="[תמונה: שי בפעולה · images/shai-hero.jpg]">
       <img src="images/shai-hero.jpg" alt="עו״ד שי רשף" onerror="this.remove()" fetchpriority="high">
-      <div class="hero-badge"><strong>עו"ד שי רשף</strong>מייסד שי רשף ושות׳ · ליטיגטור פעיל מאז 2006</div>
+      <div class="hero-badge"><strong>עו"ד שי רשף</strong>מייסד שי רשף, משרד עורכי דין · ליטיגטור פעיל מאז 2006</div>
     </div>
   </div>
 </section>
@@ -270,15 +273,15 @@ footer nav{display:flex;gap:18px}
   <div class="wrap stack" style="gap:36px">
     <div class="stack">
       <h2>אם אחד מהרגעים האלה מוכר לך, התוכנית הזאת נבנתה בשבילך</h2>
-      <p class="lead">באולם יש לך הזדמנות אחת. אין חזרות, ואין "נתקן בדיון הבא". ורוב עורכי הדין מגיעים לשם בלי שתרגלו את זה אף פעם (הם מתרגלים על הלקוח, ולא באמת לומדים ממנו).</p>
+      <p class="lead">מול הלקוח יש לך הזדמנות אחת. אין חזרות, ואין "נתקן בדיון הבא". ורוב עורכי הדין מגיעים לשם בלי שיטה (הם מתרגלים על הלקוח, ולא באמת לומדים ממנו).</p>
     </div>
     <div class="grid">
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5h.01"/></svg></span><h3>בלקאאוט מול השופט</h3><p>שאלה אחת שלא ציפית לה, לחץ, והראש מתרוקן. ואתה מדפדף בתיק מול הלקוח ומול הצד השני.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><h3>נצמד לדף</h3><p>קורא את הטיעון במקום לטעון אותו. נוקשה כשצריך להקשיב, ותוקפני ברגע הלא נכון.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>חקירה נגדית שהתהפכה</h3><p>שאלה אחת יותר מדי, והעד יצא מחוזק. בדיוק ההפך ממה שתכננת.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>לבד, בלי שותף בכיר</h3><p>אין מי שיעבור לך על כתב התביעה, ואין מי שיגיד לך מה עשית לא נכון אחרי הדיון.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><h3>לומד על חשבון הלקוחות</h3><p>כל טעות היא שיעור, אבל הלקוח משלם עליו. ועוברות שנים של ניסוי וטעייה עד שמרגישים בבית באולם.</p></div>
-      <div class="card dark-card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><h3>מוריד מחיר כי לא בטוח</h3><p>לקוח שואל כמה זה יעלה, ואתה נותן הנחה עוד לפני שביקש. כי בפנים אתה לא בטוח שתנצח.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5h.01"/></svg></span><h3>בלקאאוט לעיני הלקוח</h3><p>הצד השני מגיש בקשה באמצע הדיון, ואין לך מושג איך לתקוף אותה. והלקוח יושב מאחוריך ורואה הכול.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>העד שלא נשבר</h3><p>אתה חוקר, והעד לא זז מהגרסה שלו. יוצא מהחקירה בלי כלום, והוא יוצא מחוזק.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><h3>טובע בחומר</h3><p>קלסרים, נספחים ותצהירים. אין לך דרך לבלוע כמות גדולה של מידע ולהפוך אותה לקו טיעון ברור.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>הלקוח לא מרגיש שאתה מנוסה</h3><p>גם כשאתה יודע מה לעשות, אתה לא משדר ללקוח שכבר ראית את הסיטואציה הזאת. ובתיק הבא הוא לא חוזר.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>אין שיטת עבודה</h3><p>כל תיק מתחיל מאפס. ורק בדיעבד אתה מגלה שיכולת לקצר תהליכים ולהשיג יותר.</p></div>
+      <div class="card dark-card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M9 5h10v10"/></svg></span><h3>מגיב במקום ליזום</h3><p>הצד השני מגיש בקשות ומכתיב את הקצב, ואתה רק עונה. והלקוח רואה את זה.</p></div>
     </div>
     <div class="cta-row">
       <a class="btn navy" href="#form" data-cta="pains">קרה לי! אני רוצה לשמוע עוד</a>
@@ -292,15 +295,14 @@ footer nav{display:flex;gap:18px}
   <div class="wrap stack" style="gap:32px">
     <div class="stack">
       <p class="eyebrow">הפתרון</p>
-      <h2>לא עוד השתלמות. עוברים את כל שלבי התיק, בחמישה מפגשים.</h2>
-      <p class="lead">רוב הקורסים מלמדים על ליטיגציה. כאן עושים ליטיגציה: עוברים בפועל את כל שלבי התיק, מהיום הראשון ועד הסיכומים, עם משוב אישי על כל צעד. יוצאים עם סט כלים רחב לכל תרחיש משפטי, ומגיעים לכל דיון מוכנים כמו ליטיגטור מנוסה.</p>
+      <h2>פה זה תכלס. כלים שתשתמש בהם כבר למחרת.</h2>
+      <p class="lead">לוקחים כל שלב בתיק ומקבלים כלים פרקטיים: איך מפרקים תיק, איך מספרים את הסיפור, ואיך מובילים את התיק במקום להיגרר אחריו. ארבעה שלבים בחמישה מפגשים, ושני השלבים הראשונים נפרסים על שלושה מפגשים.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><div><h3>ניתוח התיק ובניית אסטרטגיה</h3><p>איך קוראים תיק, מזהים נקודות כוח וחולשה ומחליטים לאן הולכים. זה החלק שהלקוח לא רואה, והוא שקובע את התוצאה.</p></div></div>
-      <div class="step"><div class="n">2</div><div><h3>כתבי טענות והליכים מקדמיים</h3><p>כותבים, מקבלים משוב אישי, ומבינים מה השופט באמת קורא ועל מה הוא מדלג.</p></div></div>
-      <div class="step"><div class="n">3</div><div><h3>קדם משפט וניהול הדיון</h3><p>איך מתנהלים מול השופט, עונים על שאלה לא צפויה בלי לקפוא, ומחזיקים את הקו גם תחת לחץ.</p></div></div>
-      <div class="step"><div class="n">4</div><div><h3>חקירות עדים: ראשית ונגדית</h3><p>סימולציה חיה מול המנטור: מתי לשאול, מתי לעצור, ואיך לא להפוך עד לבעל ברית של הצד השני.</p></div></div>
-      <div class="step"><div class="n">5</div><div><h3>סיכומים ו"משפט" מלא</h3><p>מסכמים בכתב ובעל פה, ומציגים את כל התיק, מההתחלה ועד הסוף, מול המנטור. כמו באולם.</p></div></div>
+      <div class="step"><div class="n">1</div><div><h3>ניתוח התיק וכתבי טענות</h3><p>איך בולעים את כל התיק והופכים אותו לסיפור ברור.</p><ul><li>איך מציגים את הסיפור, ואיך מקלים על השופט לתפוס את הטענות העיקריות שלך</li><li>איך מתכננים אסטרטגית את השלב הבא</li><li>בצד ההגנה: באילו הגנות אפשר להשתמש, ואיך מנצלים את כל ההגנות שהחוק מאפשר</li></ul></div></div>
+      <div class="step"><div class="n">2</div><div><h3>השלב המקדמי והליכים מקדמיים</h3><p>איך הופכים את ההליכים המקדמיים לנשק, במקום לעוד שלב טכני.</p><ul><li>איך מנצלים הליכים מקדמיים לטובתך</li><li>מה עושים בקדם משפט, ואילו כלים אפשר להפעיל בו לטובתך</li></ul></div></div>
+      <div class="step"><div class="n">3</div><div><h3>הוכחות: תצהירים והכנת העדים שלך</h3><p>איך בונים את הראיות על ציר ניהול התיק.</p><ul><li>איך מכינים תצהירים, ומה כוללים בהם ומה לא</li><li>אילו מסמכים נלווים צריך כדי לתמוך בתצהירים</li><li>איך מחליטים אם להעיד עד מסוים או לא, ואיך מכינים את העדים שלך לחקירה</li><li>איך מגישים ראיות, ובאילו דרכים</li></ul></div></div>
+      <div class="step"><div class="n">4</div><div><h3>הוכחות: חקירת העדים של הצד השני</h3><p>איך חוקרים עד, גם כשהוא לא מתכוון לזוז מהגרסה שלו.</p><ul><li>איך מנסחים מטרות לחקירה</li><li>מה שואלים, ומה לא שואלים</li><li>איך מתמודדים עם סוגים שונים של עדים</li><li>טקטיקות בחקירת עדים</li></ul></div></div>
     </div>
   </div>
 </section>
@@ -308,13 +310,14 @@ footer nav{display:flex;gap:18px}
 <!-- COST -->
 <section class="dark court">
   <div class="wrap stack" style="gap:30px">
-    <h2 style="max-width:860px">ביטחון באולם הוא לא עניין של אופי. הוא עניין של הכנה.</h2>
-    <p class="lead">עו"ד עצמאי לא מקבל הכשרה מסודרת משותף בכיר. והמחיר מצטבר בשלושה מקומות:</p>
+    <h2 style="max-width:860px">עורך דין שלא יוזם, משלם על זה מול הלקוח.</h2>
+    <p class="lead">עורך דין עם פחות ניסיון נוטה להגיב במקום ליזום. והלקוח מרגיש את זה:</p>
     <div class="grid">
-      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">תיקים שהולכים לאיבוד</h3><p>החלטות קטנות בתחילת התיק קובעות איך הוא ייגמר. מי שלא רואה את כל התמונה מפסיד גם תיקים טובים.</p></div>
-      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">שכר טרחה נמוך מדי</h3><p>מי שלא בטוח בעצמו לא מצליח לגבות את מה שהוא שווה.</p></div>
-      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">משרד שלא צומח</h3><p>בלי תוצאות באולם אין המלצות, ובלי המלצות אין תיקים חדשים.</p></div>
+      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">לקוח שרואה אותך פסיבי</h3><p>הוא רואה עורך דין שלא נלחם עליו, גם כשאתה עושה עבודה טובה.</p></div>
+      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">הצד השני מוביל</h3><p>הם מגישים בקשות, מכתיבים את הקצב ומוציאים אותך משיווי משקל. ואתה רק עונה.</p></div>
+      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">הישגים שהלכו לאיבוד</h3><p>רק בדיעבד מגלים שהייתה בקשה שיכלה לקצר את ההליך, או מהלך שהיה משיג יותר.</p></div>
     </div>
+    <p class="lead">כשאתה יודע להגיש את הבקשות הנכונות בזמן הנכון, אתה מקל על עצמך ומוציא את הצד השני משיווי משקל, והלקוח רואה עורך דין אקטיבי. וגם בלי עשרים שנות ניסיון, אתה יודע למה לצפות ולא חוטף בפעם הראשונה.</p>
   </div>
 </section>
 
@@ -322,15 +325,16 @@ footer nav{display:flex;gap:18px}
 <section class="dark">
   <div class="wrap stack" style="gap:32px">
     <div class="stack">
-      <p class="eyebrow">מה תיקח איתך לכל תיק</p>
-      <h2 style="max-width:860px">ארגז כלים לכל שלב בניהול התיק, לכל אורך הקריירה.</h2>
+      <p class="eyebrow">מה תיקח איתך</p>
+      <h2 style="max-width:860px">אחרי התוכנית יהיה לך ארגז כלים לייצוג ברמה גבוהה.</h2>
     </div>
     <div class="grid">
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>שיטה לכל תיק</h3><p>דרך מסודרת לנתח תיק ולבנות אסטרטגיה, מהפגישה הראשונה עם הלקוח.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>ניסיון, לא רק ידע</h3><p>חקירה נגדית, טיעון וסיכומים שכבר עשית, ולא רק שמעת עליהם.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>שקט באולם</h3><p>כשהשופט מפתיע, אתה יודע מה לעשות, כי כבר היית שם.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M9 5h10v10"/></svg></span><h3>יוזמה באולם</h3><p>איך לוקחים את ההובלה ומוציאים את הצד השני משיווי משקל, במקום רק להגיב.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span><h3>ביטחון לתמחר</h3><p>כשאתה יודע מה אתה עושה, קל יותר לבקש את מה שאתה שווה.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>שיטת עבודה לכל תיק</h3><p>דרך מסודרת לפרק תיק, לבנות אסטרטגיה ולתכנן את השלב הבא.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><h3>לבלוע תיק גדול</h3><p>איך משתלטים על כמות גדולה של חומר והופכים אותה לקו טיעון ברור.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>סיפור שהשופט תופס</h3><p>איך מציגים את התיק כך שהטענות העיקריות שלך בולטות מהעמוד הראשון.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M9 5h10v10"/></svg></span><h3>יוזמה, לא תגובה</h3><p>אילו בקשות להגיש כדי להקל עליך ולהוציא את הצד השני משיווי משקל.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>לדעת למה לצפות</h3><p>אתה מכיר את המהלכים והתגובות האפשריים, ולא חוטף בפעם הראשונה.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>לקוח שבוטח בך וחוזר</h3><p>הלקוח מרגיש שלידו עורך דין מנוסה שמטפל בבעיה שלו בביטחון. ובתיק הבא הוא חוזר אליך.</p></div>
     </div>
     <div class="cta-row"><a class="btn" href="#form" data-cta="toolbox">אני רוצה את כל הפרטים</a></div>
   </div>
@@ -343,17 +347,17 @@ footer nav{display:flex;gap:18px}
       <img src="images/shai-portrait.jpg" alt="עו״ד שי רשף" loading="lazy" onerror="this.remove()">
     </div>
     <div class="stack" style="gap:18px">
-      <p class="eyebrow">מי מלווה אותך</p>
-      <h2>עו"ד שי רשף. 20 שנה באולם, בצד שצריך לנצח.</h2>
-      <p class="lead">שי מייסד ומנהל את משרד שי רשף ושות׳ בתל אביב, ומופיע בבתי המשפט מאז 2006. הוא מטפל בסכסוכים עסקיים, בסכסוכי שותפים ובייצוג מעסיקים בבתי הדין לעבודה, ויודע אילו מהלכים מכריעים תיק בכל שלב: תביעות ובוררויות, צווי מניעה וסעדים זמניים, משא ומתן וגישור.</p>
-      <p class="lead">את כל מחזורי הקורס שי מעביר בעצמו, מהמפגש הראשון ועד האחרון. אין מרצים מתחלפים, רק מנטור אחד שמכיר אותך ואת הנקודות שאתה צריך לחזק. ובמידת הצורך, יש הקלטות של המפגשים.</p>
+      <p class="eyebrow">מי מעביר את הקורס</p>
+      <h2>עו"ד שי רשף. 20 שנה של ליטיגציה מסחרית.</h2>
+      <p class="lead">שי מייסד ומנהל את שי רשף, משרד עורכי דין בתל אביב, ומופיע בבתי המשפט מאז 2006. הוא מתמחה בסכסוכים מסחריים ועסקיים, בסכסוכים בין שותפים ובסכסוכים בחברות ובשותפויות, ומכיר שורה ארוכה של מהלכים מכריעים בכל שלב: תביעות ובוררויות, צווי מניעה וסעדים זמניים, משא ומתן וגישור.</p>
+      <p class="lead">את כל מחזורי הקורס שי מעביר בעצמו, מהמפגש הראשון ועד האחרון. אין מרצים מתחלפים, רק מנטור אחד שמכיר את הצרכים המקצועיים שלך. אין הקלטות: אם פספסת מפגש, תוכל להצטרף לאותו שיעור במחזור הבא.</p>
       <div class="mini-stats">
         <div><b>2006</b><span>מופיע באולם מאז</span></div>
-        <div><b>מסחרי</b><span>עסקים, שותפים, עבודה</span></div>
+        <div><b>מסחרי</b><span>עסקים, שותפים וחברות</span></div>
         <div><b>עד 20</b><span>משתתפים במחזור</span></div>
       </div>
       <div class="stack" style="gap:6px">
-        <p class="quote">"רוב עורכי הדין שאני פוגש באולם לא חסרים ידע. חסר להם ניסיון, הם פשוט לא עמדו שם מספיק פעמים. בניתי את הקורס כדי שיגיעו לתיק הבא שלהם אחרי שכבר עברו את כל הדרך פעם אחת."</p>
+        <p class="quote">"ליטיגטור מנוסה הוא לא מי שיודע יותר חוק. הוא מי שמכיר כמה שיותר מקרים ותגובות אפשריות, ולכן כמעט שום דבר באולם לא מפתיע אותו. את הניסיון הזה אני מעביר בקורס."</p>
         <p class="sample-note">* ציטוט לדוגמה, ממתין לנוסח של שי</p><!-- להסיר לפני עלייה לאוויר -->
       </div>
     </div>
@@ -367,7 +371,7 @@ footer nav{display:flex;gap:18px}
       <ul><li>אתה עורך דין עצמאי, לא משנה כמה שנים אתה בתחום</li><li>אתה מתמחה שרוצה להגיע לאולם מוכן</li><li>אתה עוסק בתחום האזרחי ורוצה להופיע יותר באולם</li><li>אתה רוצה לגבות יותר, כי אתה יודע מה אתה עושה</li></ul>
     </div>
     <div class="card no"><h2 style="font-size:28px">פחות מתאימה אם</h2>
-      <ul><li>אתה עוסק בעיקר בפלילים או בנזיקין</li><li>אתה מחפש הרצאה, לא עבודה מעשית</li></ul>
+      <ul><li>אתה עוסק בעיקר בפלילים או בנזיקין</li><li>אתה מחפש תיאוריה, לא כלים מעשיים</li></ul>
     </div>
   </div>
 </section>
@@ -388,11 +392,10 @@ footer nav{display:flex;gap:18px}
 <section class="gray">
   <div class="wrap faq">
     <h2 style="margin-bottom:28px">שאלות שעולות</h2>
-    <details><summary>אחרי התוכנית אדע לייצג?</summary><p>התוכנית בנויה כך שכל שלב בתיק מתרגלים בפועל, עם משוב אישי. כשתגיע לתיק האמיתי הבא שלך, כבר עברת את כל הדרך הזאת פעם אחת.</p></details>
-    <details><summary>כבר עשיתי השתלמות בליטיגציה. מה שונה כאן?</summary><p>השתלמות נותנת ידע. כאן עוברים את כל שלבי התיק מההתחלה ועד הסוף, עם אותו מנטור לאורך כל הדרך ובקבוצה קטנה. יוצאים עם ניסיון.</p></details>
-    <details><summary>יש לי פחד במה. אצטרך לעמוד מול כולם?</summary><p>כן, ובדיוק בגלל זה. עדיף לטעות מול המנטור והקבוצה מאשר מול הצד השני באולם.</p></details>
-    <details><summary>כמה זמן זה דורש?</summary><p>חמישה מפגשים פרונטליים של שעתיים וחצי כל אחד, במרכז.</p></details>
-    <details><summary>אפשר להשתתף בזום?</summary><p>המפגשים פרונטליים, כי הסימולציות עובדות הכי טוב בחדר. במקרה חריג אפשר להצטרף בזום.</p></details>
+    <details><summary>מה אצא איתו מהתוכנית?</summary><p>ארגז כלים לכל שלב בתיק: מניתוח התיק וכתבי הטענות, דרך ההליכים המקדמיים, ועד הכנת העדים שלך וחקירת העדים של הצד השני. כלים שאפשר להשתמש בהם כבר בתיק הבא.</p></details>
+    <details><summary>כבר עשיתי השתלמות בליטיגציה. מה שונה כאן?</summary><p>השתלמות נותנת סקירה. כאן מפרקים כל שלב בתיק לכלים פרקטיים, עם ליטיגטור אחד שמעביר את כל הקורס, בקבוצה קטנה.</p></details>
+    <details><summary>כמה זמן זה דורש?</summary><p>חמישה מפגשים. שלושה פרונטליים במרכז, של 3 שעות כל אחד (מפגשים 1, 4 ו-5), ושניים בזום, של שעה וחצי כל אחד (מפגשים 2 ו-3).</p></details>
+    <details><summary>מה אם אפספס מפגש?</summary><p>אין הקלטות. אם פספסת מפגש, תוכל להצטרף לאותו שיעור במחזור הבא.</p></details>
     <details><summary>מתי המחזור הבא ומה העלות?</summary><p>השאירו פרטים, ונעדכן אתכם על המועד ועל כל הפרטים כשההרשמה למחזור תיפתח.</p></details>
   </div>
 </section>
@@ -402,7 +405,7 @@ footer nav{display:flex;gap:18px}
   <div class="wrap form-wrap">
     <div class="stack" style="gap:18px">
       <h2 style="font-weight:900;font-size:clamp(32px,4.5vw,52px);line-height:1.12">התיק הבא שלך יכול להיראות אחרת.</h2>
-      <p class="lead">במחזור יש עד 20 משתתפים, כדי שכל אחד יקבל משוב אישי. השאירו פרטים ותהיו הראשונים לשמוע כשההרשמה נפתחת.</p>
+      <p class="lead">במחזור יש עד 20 משתתפים, כדי לשמור על קבוצה קטנה וממוקדת. השאירו פרטים ותהיו הראשונים לשמוע כשההרשמה נפתחת.</p>
       <div class="trust">
         <div>בלי התחייבות ובלי תשלום בשלב הזה</div>
         <div>עדכון ראשון על מועדים ומקומות פנויים</div>
