@@ -405,7 +405,7 @@ footer nav{display:flex;gap:18px}
 <section id="form" class="dark court">
   <div class="wrap form-wrap">
     <div class="stack" style="gap:18px">
-      <h2 style="font-weight:900;font-size:clamp(32px,4.5vw,52px);line-height:1.12">התיק הבא שלך יכול להיראות אחרת.</h2>
+      <h2 style="font-weight:900;font-size:clamp(32px,4.5vw,52px);line-height:1.12">בתיק הבא אתה מוביל: ביוזמה, בידע ובתכנון.</h2>
       <p class="lead">במחזור יש עד 20 משתתפים, כדי לשמור על קבוצה קטנה וממוקדת. השאירו פרטים ותהיו הראשונים לשמוע כשההרשמה נפתחת.</p>
       <div class="trust">
         <div>בלי התחייבות ובלי תשלום בשלב הזה</div>
@@ -425,8 +425,7 @@ footer nav{display:flex;gap:18px}
       <label class="consent" id="consent-wrap"><input type="checkbox" id="f-consent" name="consent"> אני מאשר/ת לקבל עדכונים במייל, בוואטסאפ וב־SMS. אפשר להסיר בכל עת.</label>
       <!-- honeypot נגד בוטים -->
       <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden;clip-path:inset(50%)" aria-hidden="true">
-      <button class="btn" type="submit" id="submit-btn">שלחו לי את כל הפרטים</button>
-      <p class="form-note">ההשארה לא מחייבת לשום דבר</p>
+      <button class="btn" type="submit" id="submit-btn">אשמח לפרטים נוספים על הקורס</button>
     </form>
   </div>
 </section>
@@ -506,7 +505,7 @@ footer nav{display:flex;gap:18px}
     // text/plain מונע preflight של CORS – עובד עם Google Apps Script
     fetch(url, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload)})
       .then(done)
-      .catch(function(){ btn.disabled = false; btn.textContent = "שלחו לי את כל הפרטים"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); });
+      .catch(function(){ btn.disabled = false; btn.textContent = "אשמח לפרטים נוספים על הקורס"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); });
   });
 
   ["input","change"].forEach(function(t){ form.addEventListener(t, function(e){ var f = e.target.closest(".field"); if (f) f.classList.remove("err"); if (e.target.id==="f-consent") document.getElementById("consent-wrap").classList.remove("err"); }); });
