@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ליטיגטור | קורס ליטיגציה מעשית לעורכי דין, בהנחיית עו"ד שי רשף</title>
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-<meta name="description" content="כל שלבי התיק, מניתוח התיק ועד חקירת העדים. חמישה מפגשים בקבוצה קטנה, עם ליטיגטור עם 20 שנות ניסיון. כלים פרקטיים שאפשר להשתמש בהם כבר למחרת.">
-<meta property="og:title" content="ליטיגטור מנוסה מוביל את התיק עוד לפני האולם.">
+<meta name="description" content="קורס ליטיגציה מעשית לעורכי דין שכבר מנהלים תיקים: שיטות עבודה, כלים מעשיים ומקרים ותגובות מתוך 20 שנות ניסיון. 5 מפגשים, עד 20 משתתפים, בהנחיית עו״ד שי רשף.">
+<meta property="og:title" content="כבר מנהל תיקים בבית המשפט. אבל מי לימד אותך איך לנהל אותם נכון?">
 <meta property="og:description" content="תוכנית ליטיגציה מעשית לעורכי דין עצמאיים, בהנחיית עו״ד שי רשף.">
 <meta property="og:image" content="images/og.jpg">
 <meta property="og:type" content="website">
@@ -171,6 +171,35 @@ tr:last-child td{border-bottom:0}
 .gold{color:var(--gold);font-weight:800}
 /* courtroom backdrop */
 .court{background:linear-gradient(270deg,rgba(14,26,43,.97) 40%,rgba(14,26,43,.72)),url(images/courtroom-bg.jpg) left center/cover no-repeat,var(--navy)}
+
+/* shai copy additions */
+.hero h1 em{display:block}
+.sub-h{font-size:22px;font-weight:700}
+.grid.four{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.punch{font-size:clamp(20px,2.4vw,26px);font-weight:800;color:var(--ink)}
+.note-line{font-size:16px;color:var(--muted-2)}
+.mods{display:flex;flex-direction:column;gap:12px}
+details.mod{background:#fff;border-radius:14px;margin:0}
+details.mod summary{padding:20px 22px;gap:16px;justify-content:flex-start;font-size:inherit}
+details.mod summary::after{margin-inline-start:auto}
+details.mod .n{flex:none;width:46px;height:46px;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}
+details.mod .mt{display:flex;flex-direction:column;gap:2px;min-width:0}
+details.mod .mt b{font-size:20px;line-height:1.3}
+details.mod .mt small{font-size:16px;font-weight:500;color:var(--muted)}
+details.mod ul{margin:0;padding:0 92px 22px 24px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+details.mod li::marker{color:var(--gold-dark)}
+.qs{margin:0;padding:0;list-style:none;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.qs li{padding:14px 18px;border:1px solid var(--navy-line);border-radius:12px;color:#F5F7FA;font-weight:600}
+.bring{display:flex;gap:18px;align-items:flex-start;padding:24px;border-radius:var(--radius);background:rgba(224,164,58,.08);border:1px solid rgba(224,164,58,.35)}
+.bring h3{font-size:22px;color:var(--gold)}
+.bring p{color:var(--on-dark)}
+section.tight{padding:56px 0}
+.feature-quote{margin:0 auto;max-width:900px;padding:30px 34px;border-radius:var(--radius);background:var(--gold-soft);border-right:4px solid var(--gold)}
+.feature-quote blockquote{margin:0;font-size:clamp(18px,2vw,21px);line-height:1.7}
+.feature-quote figcaption{margin-top:14px;font-weight:700}
+.tcard strong,.feature-quote strong{color:var(--gold-dark)}
+.fit .card.yes{max-width:860px}
+@media (max-width:860px){details.mod ul{padding:0 22px 20px 18px}.bring{flex-direction:column}}
 /* faq */
 .faq{max-width:860px;margin:0 auto}
 details{background:#fff;border-radius:14px;margin-bottom:12px}
@@ -242,107 +271,130 @@ footer nav{display:flex;gap:18px}
       <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.25" stroke="currentColor" stroke-width="1.5"/><path d="M12 15.5 24 10l12 5.5z" fill="currentColor"/><rect x="13" y="16.5" width="22" height="2" rx=".5" fill="currentColor"/><path d="M17 20.5v11.5M21.7 20.5v11.5M26.3 20.5v11.5M31 20.5v11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="13" y="33.5" width="22" height="2" rx=".5" fill="currentColor"/><rect x="11" y="37" width="26" height="1.6" rx=".5" fill="currentColor"/></svg>
       <span><b>ליטיגטור</b><small>קורס ליטיגציה מעשית</small></span>
     </a>
-    <a class="btn" href="#form" data-cta="header">לכל הפרטים</a>
+    <a class="btn" href="#form" data-cta="header">אני רוצה לקבל פרטים</a>
   </div>
 </header>
 
 <main>
 
-<!-- HERO -->
+<!-- 01 HERO -->
 <section class="dark hero">
   <div class="wrap">
-    <div class="stack" style="gap:24px">
-      <p class="pill">לעורכי דין שרוצים לנהל כל תיק עם ארגז כלים חזק</p>
-      <h1><em>ליטיגטור מנוסה</em> מוביל את התיק עוד לפני האולם. <span class="h1-sub">מכתב הטענות ועד חקירת העד.</span></h1>
-      <p class="sub">לוקחים כל שלב בתיק ויוצאים עם כלים פרקטיים שאפשר להשתמש בהם כבר למחרת. ליטיגטור עם 20 שנות ניסיון מעביר לך את כל מה שהוא יודע, בקבוצה קטנה.</p>
-      <div class="cta-row">
-        <a class="btn" href="#form" data-cta="hero">גם אני רוצה להוביל את התיק כמו מקצוען</a>
-      </div>
+    <div class="stack" style="gap:22px">
+      <p class="pill">קורס ליטיגציה מעשית לעורכי דין</p>
+      <h1>כבר מנהל תיקים בבית המשפט. <em>אבל מי לימד אותך איך לנהל אותם נכון?</em></h1>
+      <p class="sub">אתה כבר מופיע בבתי משפט, מגיש כתבי טענות ומנהל הליכים. אבל האם הייתה לך הזדמנות ללמוד מליטיגטור מנוסה איך מתכננים תיק, מקבלים החלטות טקטיות ומתמודדים עם מצבים שלא כתובים בספרים?</p>
+      <p class="sub"><strong class="gold">קורס ליטיגטור נועד בדיוק בשביל זה.</strong> בחמישה מפגשים תלמד שיטות עבודה, כלים מעשיים ומקרים ותגובות מתוך 20 שנות ניסיון בליטיגציה, עם אפשרות להעלות שאלות ודילמות מהתיקים שאתה מנהל.</p>
+      <div class="cta-row"><a class="btn" href="#form" data-cta="hero">אני רוצה לקבל פרטים</a></div>
       <div class="stats">
-        <div class="stat"><b>4</b><span>שלבים, מניתוח התיק ועד חקירת עדים</span></div>
-        <div class="stat"><b>5</b><span>מפגשים: 3 פרונטליים ו-2 בזום</span></div>
-        <div class="stat"><b>20</b><span>שנות ניסיון בליטיגציה מסחרית</span></div>
+        <div class="stat"><b>5</b><span>מפגשים</span></div>
+        <div class="stat"><b>3+2</b><span>פרונטליים ובזום</span></div>
+        <div class="stat"><b>20</b><span>משתתפים לכל היותר</span></div>
       </div>
     </div>
     <div class="hero-media ph" data-label="[תמונה: שי בפעולה · images/shai-hero.jpg]">
       <img src="images/shai-hero.jpg" alt="עו״ד שי רשף" onerror="this.remove()" fetchpriority="high">
-      <div class="hero-badge"><strong>עו"ד שי רשף</strong>מייסד שי רשף, משרד עו"ד · ליטיגטור פעיל מאז 2006</div>
+      <div class="hero-badge"><strong>בהנחיית עו"ד שי רשף</strong>ליטיגטור פעיל מאז 2006</div>
     </div>
   </div>
 </section>
 
-<!-- PAINS -->
+<!-- 02 PAINS -->
 <section>
-  <div class="wrap stack" style="gap:36px">
-    <div class="stack">
-      <h2>אם אחד מהרגעים האלה מוכר לך, התוכנית הזאת נבנתה בשבילך</h2>
-      <p class="lead">מול הלקוח יש לך הזדמנות אחת. אין חזרות, ואין "נתקן בדיון הבא". והלקוח מזהה מהר כשאין לך יוזמה: הצד השני תוקף, אתה רק מתגונן, ובמקרים רבים זה נגמר בהפסד של התיק.</p>
-    </div>
-    <div class="grid">
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5h.01"/></svg></span><h3>בלקאאוט לעיני הלקוח</h3><p>הצד השני מגיש בקשה באמצע הדיון, ואין לך מושג איך לתקוף אותה. והלקוח יושב מאחוריך ורואה הכול.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>העד שלא נשבר</h3><p>אתה חוקר, והעד לא זז מהגרסה שלו. יוצא מהחקירה בלי כלום, והוא יוצא מחוזק.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><h3>טובע בחומר</h3><p>קלסרים, נספחים ותצהירים. אין לך דרך לבלוע כמות גדולה של מידע ולהפוך אותה לקו טיעון ברור.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>הלקוח לא מרגיש שאתה מנוסה</h3><p>גם כשאתה יודע מה לעשות, אתה לא משדר ללקוח שכבר ראית את הסיטואציה הזאת. ובתיק הבא הוא לא חוזר.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>אין שיטת עבודה</h3><p>כל תיק מתחיל מאפס. ורק בדיעבד אתה מגלה שיכולת לקצר תהליכים ולהשיג יותר.</p></div>
-      <div class="card dark-card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M9 5h10v10"/></svg></span><h3>מגיב במקום ליזום</h3><p>הצד השני מגיש בקשות ומכתיב את הקצב, ואתה רק עונה. והלקוח רואה את זה.</p></div>
-    </div>
-    <div class="cta-row">
-      <a class="btn navy" href="#form" data-cta="pains">מכיר את זה. אני רוצה להוביל את התיק</a>
-    </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section style="padding-top:0">
   <div class="wrap stack" style="gap:32px">
     <div class="stack">
-      <p class="eyebrow">הפתרון</p>
-      <h2>פה זה תכלס: פרקטיקות אמיתיות.</h2>
-      <p class="lead">לוקחים כל שלב בתיק ומקבלים כלים פרקטיים: איך מפרקים תיק, איך מספרים את הסיפור, ואיך מובילים את התיק במקום להיגרר אחריו. ארבעה שלבים בחמישה מפגשים, ובמפגש השלישי מעמיקים בשני השלבים הראשונים.</p>
+      <h2>את הניסיון שלך צברת לבד. אבל לא הכול חייבים ללמוד בדרך הקשה.</h2>
+      <p class="lead">במשרדים גדולים עורכי דין יכולים לצפות בעורכי דין ותיקים מנהלים תיקים, להתייעץ איתם ולשמוע מה כדאי לעשות, ובעיקר מה לא. אבל עורכי דין רבים מתחילים לנהל תיקים בעצמם, בלי ליווי כזה.</p>
+      <p class="lead">הם לומדים תוך כדי עבודה, מצליחים, טועים ומפיקים לקחים. ולפעמים רק בדיעבד מבינים שהייתה דרך טובה יותר.</p>
     </div>
-    <div class="steps">
-      <div class="step"><div class="n">1</div><div><h3>ניתוח התיק וכתבי טענות</h3><p>איך בולעים את כל התיק והופכים אותו לסיפור ברור.</p><ul><li>איך מציגים את הסיפור, ואיך מקלים על השופט לתפוס את הטענות העיקריות שלך</li><li>איך מתכננים אסטרטגית את השלב הבא</li><li>בצד ההגנה: באילו הגנות אפשר להשתמש, ואיך מנצלים את כל ההגנות שהחוק מאפשר</li></ul></div></div>
-      <div class="step"><div class="n">2</div><div><h3>השלב המקדמי והליכים מקדמיים</h3><p>איך הופכים את ההליכים המקדמיים לנשק, במקום לעוד שלב טכני.</p><ul><li>איך מנצלים הליכים מקדמיים לטובתך</li><li>מה עושים בקדם משפט, ואילו כלים אפשר להפעיל בו לטובתך</li></ul></div></div>
-      <div class="step"><div class="n">3</div><div><h3>הוכחות: תצהירים והכנת העדים שלך</h3><p>איך בונים את הראיות על ציר ניהול התיק.</p><ul><li>איך מכינים תצהירים, ומה כוללים בהם ומה לא</li><li>אילו מסמכים נלווים צריך כדי לתמוך בתצהירים</li><li>איך מחליטים אם להעיד עד מסוים או לא, ואיך מכינים את העדים שלך לחקירה</li><li>איך מגישים ראיות, ובאילו דרכים</li></ul></div></div>
-      <div class="step"><div class="n">4</div><div><h3>הוכחות: חקירת העדים של הצד השני</h3><p>איך חוקרים עד, גם כשהוא לא מתכוון לזוז מהגרסה שלו.</p><ul><li>איך מנסחים מטרות לחקירה</li><li>מה שואלים, ומה לא שואלים</li><li>איך מתמודדים עם סוגים שונים של עדים</li><li>טקטיקות בחקירת עדים</li></ul></div></div>
+    <h3 class="sub-h">אולי גם אתה מכיר את המצבים האלה:</h3>
+    <div class="grid four">
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></span><h3>הבקשה שלא חשבת להגיש</h3><p>רק בשלב מתקדם של התיק גילית שהיה מהלך דיוני שיכול היה לשנות את מאזן הכוחות כבר בתחילת ההליך.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>קדם המשפט שלא ניצלת עד הסוף</h3><p>הגעת מוכן לדיון, אבל רק אחריו הבנת שהיו הזדמנויות נוספות להשיג יתרון דיוני או ראייתי.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><h3>התצהיר שאפשר היה להכין אחרת</h3><p>העובדות והמסמכים היו בידיך, אבל בשלב ההוכחות גילית שחסרה תשתית ראייתית שיכולת לבנות מראש.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>החקירה שלא השיגה את מטרתה</h3><p>שאלת שאלות רבות, אבל יצאת מהחקירה בלי ההודאות, הסתירות או העובדות שרצית להוכיח.</p></div>
     </div>
+    <p class="punch">אלה בדיוק המקרים שבהם הניסיון עושה את ההבדל.</p>
+    <div class="cta-row"><a class="btn navy" href="#form" data-cta="pains">אני רוצה לקבל פרטים</a></div>
   </div>
 </section>
 
-<!-- COST -->
+<!-- 03 CURRICULUM -->
+<section class="gray">
+  <div class="wrap stack" style="gap:28px">
+    <div class="stack">
+      <p class="eyebrow">תוכנית הלימודים</p>
+      <h2>לא עוד הרצאה על סדרי דין. ללמוד איך ליטיגטור מנוסה חושב ופועל.</h2>
+      <p class="lead">ליטיגציה היא לא רק ידיעת החוק והתקנות. היא היכולת לתכנן כמה צעדים קדימה, לזהות הזדמנויות, להעריך סיכונים ולקבל החלטות נכונות לאורך חיי התיק.</p>
+      <p class="note-line">4 תחומי לימוד, ב-5 מפגשים: 3 פרונטליים ו-2 בזום. התחומים לא חופפים בהכרח למפגשים.</p>
+    </div>
+    <div class="mods">
+      <details class="mod" open><summary><span class="n">01</span><span class="mt"><b>ניתוח התיק וכתבי טענות</b><small>איך בונים את התיק נכון כבר מההתחלה?</small></span></summary><ul><li>איך מנתחים חומר עובדתי ומשפטי רב ומזהים את הטענות החשובות באמת</li><li>איך בונים את הסיפור המשפטי ומציגים אותו באופן ברור ומשכנע</li><li>איך מתכננים את האסטרטגיה כבר בשלב הכנת כתב התביעה או כתב ההגנה</li><li>אילו טענות והגנות כדאי להעלות, ואילו טעויות עלולות להשפיע על המשך ההליך</li></ul></details>
+      <details class="mod"><summary><span class="n">02</span><span class="mt"><b>הליכים מקדמיים וקדם משפט</b><small>איך הופכים את השלב המקדמי להזדמנות להשגת יתרון?</small></span></summary><ul><li>איך משתמשים בגילוי מסמכים, בשאלונים ובכלים דיוניים נוספים כדי לקדם את התיק</li><li>אילו בקשות כדאי להגיש, מתי נכון להגיש אותן ומתי עדיף להימנע</li><li>איך מתכוננים לקדם משפט ומה אפשר להשיג במהלכו</li><li>איך מזהים הזדמנויות דיוניות וראייתיות לפני שמגיעים לשלב ההוכחות</li></ul></details>
+      <details class="mod"><summary><span class="n">03</span><span class="mt"><b>תצהירי עדות ראשית והכנת עדים</b><small>איך בונים את התשתית הראייתית שתשרת אותך בשלב ההוכחות?</small></span></summary><ul><li>איך מכינים תצהיר עדות ראשית שלא רק מספר את העובדות, אלא גם משרת את האסטרטגיה המשפטית</li><li>אילו מסמכים וראיות חשוב לצרף, ואיך מארגנים את החומר</li><li>מהן הטעויות הנפוצות בהכנת תצהירים, וכיצד נמנעים מהן</li><li>איך מכינים עדים לחקירה נגדית</li><li>מתי כדאי להעיד עד מסוים, ומתי נכון לשקול לוותר על עד שכבר הוגש תצהיר מטעמו</li></ul></details>
+      <details class="mod"><summary><span class="n">04</span><span class="mt"><b>חקירה נגדית: טקטיקות ומקרים מהשטח</b><small>איך הופכים חקירה נגדית לכלי להשגת מטרות ראייתיות?</small></span></summary><ul><li>איך מגדירים מטרות לחקירה ובונים את רצף השאלות</li><li>איך חושפים סתירות, משיגים הודאות ומבססים עובדות באמצעות העדים של הצד שכנגד</li><li>איך מפרקים שאלות מורכבות לשאלות קצרות ומדויקות</li><li>איך מתמודדים עם עדים מתחמקים, עוינים ועדים שאינם משתפים פעולה</li><li>מתי כדאי לשאול שאלות פתוחות, מתי להימנע משאלות מסוג "למה", ומתי דווקא נכון להשתמש בהן</li><li>איך יודעים מתי להפסיק לשאול, ומתי עדיף לא לשאול בכלל</li></ul></details>
+    </div>
+    <div class="cta-row"><a class="btn" href="#form" data-cta="curriculum">אני רוצה לקבל פרטים</a></div>
+  </div>
+</section>
+
+<!-- 04 DILEMMAS -->
 <section class="dark court">
-  <div class="wrap stack" style="gap:30px">
-    <h2 style="max-width:860px">עורך דין שלא יוזם, משלם על זה מול הלקוח.</h2>
-    <p class="lead">עורך דין עם פחות ניסיון נוטה להגיב במקום ליזום. והלקוח מרגיש את זה:</p>
-    <div class="grid">
-      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">לקוח שרואה אותך פסיבי</h3><p>הוא רואה עורך דין שלא נלחם עליו, גם כשאתה עושה עבודה טובה.</p></div>
-      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">הצד השני מוביל</h3><p>הם מגישים בקשות, מכתיבים את הקצב ומוציאים אותך משיווי משקל. ואתה רק עונה.</p></div>
-      <div class="card" style="background:transparent;border:1px solid var(--navy-line)"><h3 style="color:var(--gold)">הישגים שהלכו לאיבוד</h3><p>רק בדיעבד מגלים שהייתה בקשה שיכלה לקצר את ההליך, או מהלך שהיה משיג יותר.</p></div>
+  <div class="wrap stack" style="gap:28px">
+    <div class="stack">
+      <p class="eyebrow">שיטת ההוראה</p>
+      <h2 style="max-width:860px">ומה עושים כשהתיק לא מתנהל לפי התוכנית?</h2>
+      <p class="lead">ליטיגטור מנוסה לא מכיר רק את הדין. הוא מכיר שורה ארוכה של מצבים אפשריים, יודע להעריך את המשמעות של כל מהלך ומבין איך נכון להגיב. בקורס לא נסתפק בשאלה מה אומר החוק. נבחן מצבים מהעבודה המשפטית ונשאל:</p>
     </div>
-    <p class="lead">כשאתה יודע להגיש את הבקשות הנכונות בזמן הנכון, אתה מקל על עצמך ומוציא את הצד השני משיווי משקל, והלקוח רואה עורך דין אקטיבי. וגם בלי עשרים שנות ניסיון, אתה יודע למה לצפות ולא חוטף בפעם הראשונה. <strong class="gold">תוביל את התיק בעוצמה.</strong></p>
+    <ul class="qs">
+      <li>מהן האפשרויות שעומדות בפנינו?</li>
+      <li>מה היתרונות והחסרונות של כל דרך פעולה?</li>
+      <li>מה עלול להשתבש?</li>
+      <li>איך אפשר היה להיערך אחרת?</li>
+      <li>ומה הייתי עושה במצב הזה, מניסיוני כליטיגטור?</li>
+    </ul>
+    <div class="bring">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></svg></span>
+      <div class="stack" style="gap:8px">
+        <h3>יש לך דילמה מתיק שאתה מנהל? תביא אותה לקורס.</h3>
+        <p>מתלבט אם להגיש בקשה? לא בטוח איך להתמודד עם עד מסוים? רוצה נקודת מבט נוספת על מהלך טקטי? במהלך המפגשים תוכל להעלות שאלות ודילמות מעבודתך ולבחון אותן יחד עם המרצה והמשתתפים, תוך שמירה על חיסיון וסודיות.</p>
+      </div>
+    </div>
+    <p class="lead">כי לפעמים התובנה החשובה ביותר מגיעה דווקא מהדיון במקרה אמיתי. <strong class="gold">ככה לומדים להוביל את התיק בעוצמה.</strong></p>
   </div>
 </section>
 
-<!-- TOOLBOX -->
+<!-- EARLY TESTIMONIAL -->
+<section class="tight">
+  <div class="wrap">
+    <figure class="feature-quote">
+      <blockquote>"עברתי סדנת ליטיגציה אצל עו"ד שי רשף. מעבר לידע המקצועי הרחב של עוה"ד רשף בפרוצדורות השונות, בחוקים ובתקנות, הרי שהערך המוסף האמיתי של הסדנה הוא <strong>קבלת כלים ממשיים ומעשיים לניהול ההליך המשפטי</strong>, שנראה שהם מבוססים על ניסיון מקצועי רב מאוד בתחום. זו סדנה שגם עו"ד מתחילים יוכלו ללמוד בה המון, אבל גם עו"ד שכבר עוסקים בליטיגציה יוכלו לקבל בה ערך מוסף אמיתי לניהול ההליכים המשפטיים שלהם. מודה על סדנה מועילה."</blockquote>
+      <figcaption>עו"ד עזריה ח.א.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 05 BENEFITS -->
 <section class="dark">
   <div class="wrap stack" style="gap:32px">
     <div class="stack">
       <p class="eyebrow">מה תיקח איתך</p>
-      <h2 style="max-width:860px">אחרי התוכנית יהיה לך ארגז כלים לייצוג ברמה גבוהה.</h2>
+      <h2 style="max-width:860px">לא רק לדעת מה לעשות. לדעת גם למה, מתי ואיך.</h2>
+      <p class="lead">המטרה היא לא ללמד אותך מחדש סדרי דין, אלא להוסיף לארגז הכלים שלך את הניסיון המעשי והשיקולים הטקטיים שלא תמיד נחשפים אליהם בעבודה השוטפת.</p>
     </div>
     <div class="grid">
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>שיטת עבודה לכל תיק</h3><p>דרך מסודרת לפרק תיק, לבנות אסטרטגיה ולתכנן את השלב הבא.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><h3>לבלוע תיק גדול</h3><p>איך משתלטים על כמות גדולה של חומר והופכים אותה לקו טיעון ברור.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>סיפור שהשופט תופס</h3><p>איך מציגים את התיק כך שהטענות העיקריות שלך בולטות מהעמוד הראשון.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M9 5h10v10"/></svg></span><h3>יוזמה, לא תגובה</h3><p>אילו בקשות להגיש כדי להקל עליך ולהוציא את הצד השני משיווי משקל.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>לדעת למה לצפות</h3><p>אתה מכיר את המהלכים והתגובות האפשריים, ולא חוטף בפעם הראשונה.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>לקוח שבוטח בך וחוזר</h3><p>הלקוח מרגיש שלידו עורך דין מנוסה שמטפל בבעיה שלו בביטחון. ובתיק הבא הוא חוזר אליך.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M9 5h10v10"/></svg></span><h3>לחשוב כמה צעדים קדימה</h3><p>לתכנן את ניהול התיק כבר מהשלבים הראשונים, ולהבין איך החלטות של היום ישפיעו על ההמשך.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>לזהות הזדמנויות דיוניות</h3><p>להכיר מהלכים שלא תמיד חושבים עליהם בזמן אמת, ולדעת מתי נכון להשתמש בהם.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><h3>לבנות תשתית ראייתית נכונה</h3><p>להכין תצהירים, מסמכים ועדים מתוך מחשבה על שלב ההוכחות ועל מה שבאמת צריך להוכיח.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>לחקור עם מטרה</h3><p>חקירה נגדית שמכוונת להודאות, לחשיפת סתירות ולביסוס עובדות, ולא רק לשאילת שאלות.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>להימנע מטעויות שאחרים כבר עשו</h3><p>ללמוד מניסיון מעשי וממקרים אמיתיים, במקום לגלות כל טעות בעצמך.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>לפתח חשיבה טקטית</h3><p>להכיר יותר מקרים ותגובות, ולגשת להחלטות מקצועיות עם יותר אפשרויות ושיקולים.</p></div>
     </div>
-    <div class="cta-row"><a class="btn" href="#form" data-cta="toolbox">אני רוצה את כל הפרטים</a></div>
+    <div class="cta-row"><a class="btn" href="#form" data-cta="benefits">אני רוצה לקבל פרטים</a></div>
   </div>
 </section>
 
-<!-- INSTRUCTOR -->
+<!-- 06 INSTRUCTOR -->
 <section>
   <div class="wrap instructor">
     <div class="portrait ph" data-label="[פורטרט של שי · אנכי 4:5 · images/shai-portrait.jpg]">
@@ -350,65 +402,78 @@ footer nav{display:flex;gap:18px}
     </div>
     <div class="stack" style="gap:18px">
       <p class="eyebrow">מי מעביר את הקורס</p>
-      <h2>עו"ד שי רשף. ליטיגטור עם 20 שנות ניסיון.</h2>
-      <p class="lead">שי מייסד ומנהל את שי רשף, משרד עו"ד בתל אביב, ומופיע בבתי המשפט מאז 2006. הוא מתמחה בסכסוכים מסחריים ועסקיים, בסכסוכים בין שותפים ובסכסוכים בחברות ובשותפויות, ומכיר שורה ארוכה של מהלכים מכריעים בכל שלב: תביעות ובוררויות, צווי מניעה וסעדים זמניים, משא ומתן וגישור.</p>
-      <p class="lead">את כל מחזורי הקורס שי מעביר בעצמו, מהמפגש הראשון ועד האחרון. אין מרצים מתחלפים, רק מנטור אחד שמכיר את הצרכים המקצועיים שלך.</p>
+      <h2>עו"ד שי רשף. 20 שנות ניסיון בליטיגציה.</h2>
+      <p class="lead">יש דברים שלומדים מספרים, ויש דברים שלומדים רק אחרי שנים של ניהול תיקים והופעות בבתי משפט.</p>
+      <p class="lead">שי הוא מייסד ומנהל שי רשף, משרד עו"ד בתל אביב, העוסק בליטיגציה אזרחית ומסחרית. מאז 2006 הוא מייצג לקוחות בבתי המשפט, בין היתר בסכסוכים עסקיים ומסחריים, בסכסוכים בין בעלי מניות ושותפים ובהליכים משפטיים מורכבים. את הניסיון הזה הוא מביא לקורס, דרך שיטות עבודה, דוגמאות מעשיות, מקרים ותגובות, ודיון בשיקולים שמאחורי ההחלטות לאורך חיי התיק.</p>
+      <p class="lead">את כל חמשת המפגשים שי מעביר בעצמו, בקבוצה של עד 20 משתתפים שמאפשרת שאלות, דיונים ולמידה משותפת.</p>
       <div class="mini-stats">
-        <div><b>2006</b><span>מופיע באולם מאז</span></div>
-        <div><b>מסחרי</b><span>עסקים, שותפים וחברות</span></div>
+        <div><b>2006</b><span>מופיע בבתי משפט מאז</span></div>
+        <div><b>5</b><span>מפגשים, כולם איתו</span></div>
         <div><b>עד 20</b><span>משתתפים במחזור</span></div>
       </div>
-      <p class="quote">"ליטיגטור מנוסה הוא לא מי שיודע יותר חוק. הוא מי שמכיר כמה שיותר מקרים ותגובות אפשריות, ולכן כמעט שום דבר באולם לא מפתיע אותו. את הניסיון הזה אני מעביר בקורס."</p>
+      <p class="quote">"ליטיגטור מנוסה הוא לא בהכרח מי שיודע יותר חוק. הוא מי שכבר נתקל ביותר מצבים, מכיר יותר אפשרויות פעולה ויודע טוב יותר למה לצפות. את הניסיון הזה אני רוצה להעביר הלאה."</p>
     </div>
   </div>
 </section>
 
-<!-- FIT -->
+<!-- 07 FIT -->
 <section class="gray fit">
-  <div class="wrap grid">
-    <div class="card yes"><h2 style="font-size:28px">התוכנית בשבילך אם</h2>
-      <ul><li>אתה עורך דין עצמאי, לא משנה כמה שנים אתה בתחום</li><li>אתה מתמחה שרוצה להגיע לאולם מוכן</li><li>אתה רוצה להיות יוזם, ולהגיע מוכן לשורה ארוכה של תרחישים</li></ul>
+  <div class="wrap stack" style="gap:24px">
+    <div class="stack">
+      <h2>הקורס הזה מיועד לעורכי דין שכבר נמצאים במגרש.</h2>
+      <p class="lead">אם אתה כבר מופיע בבתי משפט ומנהל הליכים, אבל רוצה ללמוד שיטות עבודה וחשיבה טקטית של ליטיגטור מנוסה, הקורס הזה נבנה בשבילך.</p>
     </div>
-    <div class="card no"><h2 style="font-size:28px">פחות מתאימה אם</h2>
-      <ul><li>אתה עוסק בעיקר בפלילים או בנזיקין</li><li>אתה מחפש תיאוריה, לא כלים מעשיים</li></ul>
+    <div class="card yes"><h3 style="font-size:22px">הקורס מתאים לך במיוחד אם:</h3>
+      <ul>
+        <li>אתה עורך דין שכבר צבר ניסיון בליטיגציה אזרחית או מסחרית</li>
+        <li>התחלת את דרכך במשרד קטן, או יצאת לעצמאות, בלי הזדמנות ללמוד באופן שיטתי לצד ליטיגטור ותיק</li>
+        <li>אתה כבר מכיר את הפרוצדורה, אבל רוצה להרחיב את ארגז הכלים המקצועי והטקטי שלך</li>
+        <li>אתה רוצה להבין לא רק מה עושים בכל שלב, אלא גם מה השיקולים שמאחורי כל החלטה</li>
+        <li>אתה מחפש מסגרת שבה אפשר לשאול, להתלבט וללמוד גם מהניסיון של אחרים</li>
+      </ul>
     </div>
+    <p class="note-line">הקורס פחות מתאים למי שמחפש לימודי מבוא לליטיגציה, או לעורכי דין שעוסקים בעיקר בתחומים שאינם ליטיגציה אזרחית ומסחרית.</p>
   </div>
 </section>
 
-<!-- TESTIMONIALS – עדויות אמיתיות ממחזור ספטמבר 2026 (התקבלו מיובל) -->
+<!-- 08 TESTIMONIALS -->
 <section id="testimonials">
   <div class="wrap stack" style="gap:28px">
-    <h2>מה אומרים משתתפי המחזור הקודם</h2>
+    <div class="stack">
+      <h2>עורכי דין שכבר השתתפו בקורס מספרים</h2>
+      <p class="lead">מה אומרים עורכי דין שכבר עברו את חמשת המפגשים של קורס ליטיגטור?</p>
+    </div>
     <div class="grid">
-      <div class="tcard"><blockquote>"שי רשף היקר, תודה רבה לך על הזכות להשתתף בחמישה מפגשי ספרינטים בליטיגציה שערכת, המיועדים לעורכי דין ליטיגטורים המבקשים לדייק ולנהל תיקי ליטיגציה ביעילות מיטבית ולנצח את התיק מהשלב הראשון: הכנת כתב התביעה או ההגנה, ועד לשלב ההוכחות והסיכומים. העשרת אותנו בידע רב ובשיטת עבודה ייחודית ומקורית שחובה לאמץ. היית סבלני וקשוב לכל שאלותינו. יישר כוח, והמשך להצליח ללמד את עורכי הדין להיות טובים הרבה יותר."</blockquote><cite>מתוך מחזור ספט' 2026</cite></div>
-      <div class="tcard"><blockquote>"שלום שי, רציתי להודות לך על הקורס. לקבל במספר מפגשים את התובנות שלך, שמבוססות על שנים רבות של ניסיון, זה מאיר עיניים ומקצר את הדרך."</blockquote><cite>מתוך מחזור ספט' 2026</cite></div>
-      <div class="tcard"><blockquote>"עברתי סדנת ליטיגציה אצל עו"ד שי רשף. מעבר לידע המקצועי הרחב של עוה"ד רשף בפרוצדורות השונות, בחוקים ובתקנות, הרי שהערך המוסף האמיתי של הסדנה הוא קבלת כלים ממשיים ומעשיים לניהול ההליך המשפטי, שנראה שהם מבוססים על ניסיון מקצועי רב מאוד בתחום. זו סדנה שגם עו"ד מתחילים יוכלו ללמוד בה המון, אבל גם עו"ד שכבר עוסקים בליטיגציה יוכלו לקבל בה ערך מוסף אמיתי לניהול ההליכים המשפטיים שלהם. מודה על סדנה מועילה."</blockquote><cite>עו"ד עזריה ח.א.</cite></div>
+      <div class="tcard"><blockquote>"שי רשף היקר, תודה רבה לך על הזכות להשתתף בחמישה מפגשי ספרינטים בליטיגציה שערכת, המיועדים לעורכי דין ליטיגטורים המבקשים לדייק ולנהל תיקי ליטיגציה ביעילות מיטבית ולנצח את התיק מהשלב הראשון: הכנת כתב התביעה או ההגנה, ועד לשלב ההוכחות והסיכומים. העשרת אותנו בידע רב <strong>ובשיטת עבודה ייחודית ומקורית שחובה לאמץ</strong>. היית סבלני וקשוב לכל שאלותינו. יישר כוח, והמשך להצליח ללמד את עורכי הדין להיות טובים הרבה יותר."</blockquote><cite>מתוך מחזור ספט' 2026</cite></div>
+      <div class="tcard"><blockquote>"שלום שי, רציתי להודות לך על הקורס. לקבל במספר מפגשים את התובנות שלך, שמבוססות על שנים רבות של ניסיון, <strong>זה מאיר עיניים ומקצר את הדרך</strong>."</blockquote><cite>מתוך מחזור ספט' 2026</cite></div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- 09 FAQ -->
 <section class="gray">
   <div class="wrap faq">
-    <h2 style="margin-bottom:28px">שאלות שעולות</h2>
-    <details><summary>מה אצא איתו מהתוכנית?</summary><p>ארגז כלים לכל שלב בתיק: מניתוח התיק וכתבי הטענות, דרך ההליכים המקדמיים, ועד הכנת העדים שלך וחקירת העדים של הצד השני. כלים שאפשר להשתמש בהם כבר בתיק הבא.</p></details>
-    <details><summary>כבר עשיתי השתלמות בליטיגציה. מה שונה כאן?</summary><p>השתלמות נותנת סקירה. כאן מפרקים כל שלב בתיק לכלים פרקטיים, עם ליטיגטור אחד שמעביר את כל הקורס, בקבוצה קטנה.</p></details>
-    <details><summary>כמה זמן זה דורש?</summary><p>חמישה מפגשים. שלושה פרונטליים במרכז, של 3 שעות כל אחד (מפגשים 1, 4 ו-5), ושניים בזום, של שעה וחצי כל אחד (מפגשים 2 ו-3).</p></details>
-    <details><summary>מה אם אפספס מפגש?</summary><p>אין הקלטות. אם פספסת מפגש, תוכל להצטרף לאותו שיעור במחזור הבא (בלייב החומר נטמע הרבה יותר טוב, וחשוב לנו שתצא עם מירב הכלים).</p></details>
-    <details><summary>מתי המחזור הבא ומה העלות?</summary><p>השאירו פרטים, ונעדכן אתכם על המועד ועל כל הפרטים כשההרשמה למחזור תיפתח.</p></details>
+    <h2 style="margin-bottom:28px">שאלות נפוצות</h2>
+    <details><summary>יש לי כבר ניסיון בבתי משפט. האם הקורס מתאים לי?</summary><p>בהחלט. הקורס מיועד בעיקר לעורכי דין שכבר מופיעים בבתי משפט ומנהלים הליכים. הוא לא נועד ללמד את יסודות המקצוע, אלא להרחיב את ארגז הכלים באמצעות שיטות עבודה, חשיבה טקטית ומקרים ותגובות מניסיונו של ליטיגטור ותיק.</p></details>
+    <details><summary>במה הקורס שונה מהשתלמות רגילה בליטיגציה?</summary><p>במקום להסתפק בסקירה של הדין והפסיקה, הקורס מתמקד בשאלה איך פועלים בפועל. בכל נושא נבחן אפשרויות פעולה, החלטות טקטיות, טעויות נפוצות ומקרים מהשטח. הקורס מועבר כולו על ידי ליטיגטור פעיל, בקבוצה קטנה שמאפשרת דיון ושאלות.</p></details>
+    <details><summary>האם אוכל להעלות שאלות מתיקים שאני מנהל?</summary><p>כן. במהלך המפגשים אפשר להעלות שאלות ודילמות מקצועיות מהעבודה השוטפת, ולדון באפשרויות הפעולה ובשיקולים הרלוונטיים, תוך הקפדה על חיסיון וסודיות.</p></details>
+    <details><summary>כמה מפגשים כולל הקורס?</summary><p>חמישה מפגשים: שלושה מפגשים פרונטליים במרכז הארץ, בני שלוש שעות כל אחד, ושני מפגשי זום, בני שעה וחצי כל אחד.</p></details>
+    <details><summary>כמה משתתפים יש בכל מחזור?</summary><p>עד 20 משתתפים, כדי לאפשר שאלות, דיונים ואינטראקציה במהלך המפגשים.</p></details>
+    <details><summary>מה קורה אם אפספס מפגש?</summary><p>המפגשים אינם מוקלטים. משתתף שנעדר ממפגש יוכל להצטרף לאותו שיעור במחזור הבא.</p></details>
+    <details><summary>מתי נפתח המחזור הבא ומה העלות?</summary><p>אפשר להשאיר פרטים ולקבל עדכון על מועדי המחזור הבא, תוכנית הקורס והעלות, עם פתיחת ההרשמה.</p></details>
   </div>
 </section>
 
-<!-- FORM -->
+<!-- 10 FORM -->
 <section id="form" class="dark court">
   <div class="wrap form-wrap">
     <div class="stack" style="gap:18px">
-      <h2 style="font-weight:900;font-size:clamp(32px,4.5vw,52px);line-height:1.12">בתיק הבא אתה מוביל: ביוזמה, בידע ובתכנון.</h2>
-      <p class="lead">במחזור יש עד 20 משתתפים, כדי לשמור על קבוצה קטנה וממוקדת. השאירו פרטים ותהיו הראשונים לשמוע כשההרשמה נפתחת.</p>
+      <h2 style="font-weight:900;font-size:clamp(30px,4.2vw,48px);line-height:1.15">את הניסיון שלך כבר התחלת לצבור. עכשיו הזמן להרחיב את ארגז הכלים.</h2>
+      <p class="lead">חמישה מפגשים שבהם נלמד לחשוב, לתכנן ולפעול כמו ליטיגטור מנוסה, באמצעות שיטות עבודה, מקרים ותגובות ודיון בדילמות אמיתיות.</p>
       <div class="trust">
-        <div>בלי התחייבות ובלי תשלום בשלב הזה</div>
-        <div>עדכון ראשון על מועדים ומקומות פנויים</div>
-        <div>לא נעביר את הפרטים שלך לאף אחד</div>
+        <div>בהנחיית עו"ד שי רשף, 20 שנות ניסיון</div>
+        <div>עד 20 משתתפים במחזור</div>
+        <div>נעדכן אותך במועדי המחזור הבא, בתוכנית המלאה ובעלות</div>
       </div>
     </div>
 
@@ -423,7 +488,8 @@ footer nav{display:flex;gap:18px}
       <label class="consent" id="consent-wrap"><input type="checkbox" id="f-consent" name="consent"> אני מאשר/ת לקבל עדכונים במייל, בוואטסאפ וב־SMS. אפשר להסיר בכל עת.</label>
       <!-- honeypot נגד בוטים -->
       <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden;clip-path:inset(50%)" aria-hidden="true">
-      <button class="btn" type="submit" id="submit-btn">אשמח לפרטים נוספים על הקורס</button>
+      <button class="btn" type="submit" id="submit-btn">אני רוצה לקבל פרטים</button>
+      <p class="form-note">השארת הפרטים אינה מחייבת הרשמה או תשלום.</p>
     </form>
   </div>
 </section>
@@ -437,7 +503,7 @@ footer nav{display:flex;gap:18px}
   </div>
 </footer>
 
-<div class="sticky-cta" id="sticky"><a class="btn" href="#form" data-cta="sticky">גם אני רוצה להוביל את התיק כמו מקצוען</a></div>
+<div class="sticky-cta" id="sticky"><a class="btn" href="#form" data-cta="sticky">אני רוצה לקבל פרטים</a></div>
 
 <script>
 (function(){
@@ -503,7 +569,7 @@ footer nav{display:flex;gap:18px}
     // text/plain מונע preflight של CORS – עובד עם Google Apps Script
     fetch(url, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload)})
       .then(done)
-      .catch(function(){ btn.disabled = false; btn.textContent = "אשמח לפרטים נוספים על הקורס"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); });
+      .catch(function(){ btn.disabled = false; btn.textContent = "אני רוצה לקבל פרטים"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); });
   });
 
   ["input","change"].forEach(function(t){ form.addEventListener(t, function(e){ var f = e.target.closest(".field"); if (f) f.classList.remove("err"); if (e.target.id==="f-consent") document.getElementById("consent-wrap").classList.remove("err"); }); });
