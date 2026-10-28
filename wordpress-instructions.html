@@ -6,110 +6,78 @@
 <meta name="robots" content="noindex">
 <title>הטמעת דף ליטיגטור בוורדפרס</title>
 <style>
-:root{--ink:#16202E;--muted:#4A5566;--line:#DDE2EA;--navy:#0E1A2B;--gold:#B37A1A;--soft:#FBF4E6;--code:#F2F4F7}
+:root{--ink:#16202E;--muted:#4A5566;--line:#DDE2EA;--gold:#B37A1A;--soft:#FBF4E6;--code:#F2F4F7}
 *{box-sizing:border-box}
 body{margin:0;background:#fff;color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-main{max-width:860px;margin:0 auto;padding:32px 20px 64px}
+main{max-width:820px;margin:0 auto;padding:32px 20px 64px}
 h1{font-size:30px;line-height:1.2;margin:0 0 6px}
-h2{font-size:22px;margin:40px 0 10px;padding-top:18px;border-top:1px solid var(--line)}
-h3{font-size:18px;margin:22px 0 6px}
-p,li{color:var(--muted)}
-strong{color:var(--ink)}
-.lead{font-size:18px;color:var(--ink)}
+h2{font-size:22px;margin:36px 0 10px;padding-top:18px;border-top:1px solid var(--line)}
+p,li{color:var(--muted)} strong{color:var(--ink)}
 .box{background:var(--soft);border-right:4px solid var(--gold);padding:14px 18px;border-radius:6px;margin:16px 0}
 code{background:var(--code);padding:1px 6px;border-radius:4px;font-size:15px;direction:ltr;unicode-bidi:embed}
-pre{background:var(--code);padding:14px 16px;border-radius:8px;overflow-x:auto;direction:ltr;text-align:left;font-size:14px;line-height:1.5}
+pre{background:var(--code);padding:14px 16px;border-radius:8px;overflow-x:auto;direction:ltr;text-align:left;font-size:14px}
 table{border-collapse:collapse;width:100%;font-size:15px}
-th,td{border:1px solid var(--line);padding:8px 10px;text-align:right;vertical-align:top}
-th{background:var(--code)}
-ol li,ul li{margin-bottom:6px}
-.check li{list-style:none;position:relative}
-.check li::before{content:"☐";position:absolute;right:-22px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:right;vertical-align:top} th{background:var(--code)}
+li{margin-bottom:6px}
 </style>
 </head>
 <body>
 <main>
-<h1>הטמעת דף הנחיתה "ליטיגטור" בוורדפרס</h1>
-<p class="lead">הדף מוכן ומאושר. צריך להטמיע אותו באתר reshef-adv.co.il, לחבר אותו ל<strong>טופס של האתר</strong> ולפיקסל הקיים, ולוודא שכל ליד מגיע לשי ומדווח למטא כ-Lead.</p>
-<p><strong>איך הדף צריך להיראות:</strong> <a href="https://reshef-landing-production-05c1.up.railway.app/">https://reshef-landing-production-05c1.up.railway.app/</a></p>
-<p><strong>הקבצים:</strong> בתיקייה הזו. <code>index.html</code> הוא הדף כולו (CSS ו-JS בתוך הקובץ), ותיקיית <code>images/</code> מכילה את התמונות.</p>
+<h1>הטמעת דף הנחיתה "ליטיגטור" בוורדפרס (Elementor)</h1>
+<p><strong>ככה הדף צריך להיראות:</strong> <a href="https://reshef-landing-production-05c1.up.railway.app/">https://reshef-landing-production-05c1.up.railway.app/</a></p>
+<div class="box">הדף מגיע כתבנית Elementor מוכנה, עם התמונות בפנים. כל מה שנשאר זה לייבא את התבנית, לשים את הטופס של האתר ולבדוק. בערך 30 דקות עבודה.</div>
 
-<h2>1. עמוד חדש בתבנית ריקה</h2>
-<ol>
-<li>יוצרים עמוד חדש, למשל בכתובת <code>/litigator</code>.</li>
-<li>תבנית: <strong>ריקה, בלי header ו-footer של האתר</strong> (למשל Elementor Canvas, או "Blank" / "Full width, no header" בתבנית). לדף יש header ו-footer משלו. בלי תבנית ריקה, ה-CSS של הדף והתבנית יתנגשו.</li>
-<li>מעלים את התמונות מתיקיית <code>images/</code>, ב-FTP לתיקייה <code>/wp-content/uploads/litigator/images/</code> או לספריית המדיה.</li>
-<li>ב-<code>index.html</code> מחליפים את כל המופעים של <code>images/</code> בכתובת שאליה העליתם. למשל: <code>/wp-content/uploads/litigator/images/</code>.</li>
-</ol>
-
-<h2>2. הדבקת הדף</h2>
-<ol>
-<li>מעתיקים מ-<code>index.html</code> את כל מה שבין <code>&lt;head&gt;</code> ל-<code>&lt;/body&gt;</code>, <strong>חוץ מבלוק הפיקסל ובלוק <code>LP_CONFIG</code></strong> (ראו סעיף 4), ומדביקים לבלוק Custom HTML או לווידג'ט HTML של Elementor.</li>
-<li>צריך משתמש עם הרשאת <code>unfiltered_html</code> (מנהל), אחרת וורדפרס מוחק את תגי ה-<code>&lt;script&gt;</code>.</li>
-<li>בודקים שהדף נראה כמו בקישור למעלה, במחשב ובנייד.</li>
-</ol>
-
-<h2>3. הטופס: מחליפים את הטופס שלנו בטופס של האתר</h2>
-<p>בדף, הטופס יושב בתוך <code>&lt;section id="form"&gt;</code>. מחליפים <strong>רק</strong> את האלמנט <code>&lt;form id="lead-form"&gt;…&lt;/form&gt;</code> בטופס של האתר (Elementor Form, Contact Form 7 וכו').</p>
+<h2>הקבצים</h2>
 <ul>
-<li><strong>לא</strong> משנים את ה-<code>id="form"</code> של ה-section: כל כפתורי הדף מובילים אליו.</li>
-<li>הקוד של הדף בנוי לעבוד גם כשהטופס שלו לא קיים.</li>
+<li><code>litigator-elementor.json</code>: דף הנחיתה</li>
+<li><code>litigator-thanks-elementor.json</code>: דף התודה. הוא כבר כולל את אירוע ה-Lead לפיקסל</li>
+<li><code>og.jpg</code>: תמונת השיתוף לוואטסאפ ולפייסבוק</li>
 </ul>
 
-<h3>השדות הנדרשים</h3>
+<h2>1. ייבוא</h2>
+<ol>
+<li>Templates ← Saved Templates ← <strong>Import Templates</strong>, ומייבאים את שני קבצי ה-JSON.</li>
+<li>יוצרים שני עמודים, למשל <code>/litigator</code> ו-<code>/litigator-thanks</code>. בכל אחד: Edit with Elementor ← אייקון התיקייה ← My Templates ← <strong>Insert</strong> את התבנית המתאימה.</li>
+<li>Page Settings ← Page Layout: <strong>Elementor Canvas</strong>. לדף יש header ו-footer משלו.</li>
+<li>לעמוד התודה: noindex בהגדרות ה-SEO.</li>
+</ol>
+
+<h2>2. הטופס</h2>
+<p>בסקשן הטופס, בעמודה השמאלית, יש ווידג'ט Shortcode עם הטקסט "להחליף בטופס של האתר". מחליפים אותו בטופס של האתר (Elementor Form, או shortcode של CF7 וכו'). <strong>לא</strong> מוחקים את הסקשן ולא משנים לו את ה-ID <code>form</code>: כל הכפתורים בדף מובילים אליו.</p>
 <table>
 <tr><th>שדה</th><th>סוג</th><th>הערות</th></tr>
 <tr><td>שם מלא</td><td>טקסט, חובה</td><td></td></tr>
-<tr><td>טלפון נייד</td><td>טלפון, חובה</td><td>נייד ישראלי (05X-XXXXXXX)</td></tr>
+<tr><td>טלפון נייד</td><td>טלפון, חובה</td><td></td></tr>
 <tr><td>אימייל</td><td>אימייל, חובה</td><td></td></tr>
 <tr><td>ותק</td><td>בחירה, חובה</td><td>מתמחה · עד שנה · 1–3 שנים · 3–5 שנים · מעל 5 שנים</td></tr>
 <tr><td>תחום עיקרי</td><td>בחירה, חובה</td><td>אזרחי / מסחרי · משפחה · עבודה · מקרקעין · אחר</td></tr>
-<tr><td>הסכמה לדיוור</td><td>תיבת סימון, חובה</td><td><strong>לא מסומנת מראש</strong> (חוק הספאם). נוסח: "אני מאשר/ת לקבל עדכונים במייל, בוואטסאפ וב־SMS. אפשר להסיר בכל עת."</td></tr>
+<tr><td>הסכמה לדיוור</td><td>תיבת סימון, חובה</td><td><strong>לא מסומנת מראש.</strong> נוסח: "אני מאשר/ת לקבל עדכונים במייל, בוואטסאפ וב־SMS, וקראתי את <a>מדיניות הפרטיות</a>. אפשר להסיר בכל עת." עם קישור למדיניות הפרטיות של האתר</td></tr>
 </table>
-<p><strong>כפתור השליחה:</strong> "אני רוצה לקבל פרטים". מתחתיו: "השארת הפרטים אינה מחייבת הרשמה או תשלום."</p>
+<p><strong>כפתור:</strong> "אני רוצה לקבל פרטים". <strong>אחרי שליחה:</strong> מייל לשי עם כל השדות, והפניה לעמוד התודה (<code>/litigator-thanks</code>).</p>
 
-<h3>אחרי שליחה מוצלחת</h3>
-<ol>
-<li><strong>מייל לשי</strong> עם כל השדות.</li>
-<li><strong>שמירה</strong> של כל ליד: Elementor Submissions, Flamingo ל-CF7, או גיליון.</li>
-<li><strong>הפניה לדף תודה:</strong> יוצרים עמוד תודה עם התוכן של <code>thanks.html</code>, ומסמנים אותו noindex.</li>
-<li><strong>אירוע Lead למטא:</strong> הכי פשוט ובטוח זה לשים בדף התודה בלבד:
-<pre>&lt;script&gt;if (window.fbq) fbq('track','Lead');&lt;/script&gt;</pre>
-אם אין דף תודה, ב-Contact Form 7:
-<pre>&lt;script&gt;
-document.addEventListener('wpcf7mailsent', function(){
-  if (window.fbq) fbq('track','Lead');
-  setTimeout(function(){ location.href='/litigator-thanks/'; }, 300);
-});
-&lt;/script&gt;</pre>
-</li>
-</ol>
-
-<h2>4. פיקסל מטא</h2>
+<h2>3. פיקסל ואירוע Lead</h2>
 <ul>
-<li>האתר כבר טוען את הפיקסל של שי, ואותו פיקסל ממשיך לשמש את הדף.</li>
-<li>בראש <code>index.html</code> יש בלוק <code>&lt;!-- Meta Pixel --&gt;</code> ובלוק <code>LP_CONFIG</code>. <strong>לא מדביקים אותם</strong>: הפיקסל של האתר כבר נטען בעמוד, וכך הוא לא ייטען פעמיים.</li>
-<li>הדף שולח לבד גם אירועים מותאמים דרך הפיקסל של האתר: <code>CTAClick</code> (לחיצה על כפתור) ו-<code>FormStart</code>.</li>
-<li>האירוע שהקמפיין מתבסס עליו הוא <code>Lead</code> (סעיף 3).</li>
+<li>הפיקסל של האתר כבר נטען בעמוד. לא מוסיפים פיקסל.</li>
+<li>אירוע ה-<strong>Lead</strong> נשלח אוטומטית מעמוד התודה, כי הוא כבר בתבנית. לכן חשוב שרק שליחה מוצלחת של הטופס תוביל לעמוד הזה.</li>
 </ul>
 
-<h2>5. תמונת שיתוף</h2>
-<p>בהגדרות ה-SEO של העמוד (Yoast / RankMath), מגדירים את תמונת השיתוף ל-<code>images/og.jpg</code> בכתובת מלאה. כותרת השיתוף: "כבר מנהל תיקים בבית המשפט. אבל מי לימד אותך איך לנהל אותם נכון?"</p>
+<h2>4. קישורים ותמונת שיתוף</h2>
+<ul>
+<li>בתחתית הדף יש קישורים ל-<code>/privacy-policy/</code> ול-<code>/accessibility-statement/</code>. אם הכתובות באתר שונות, מעדכנים בווידג'ט ה-HTML התחתון.</li>
+<li>בהגדרות ה-SEO של העמוד: תמונת שיתוף <code>og.jpg</code>, וכותרת: "כבר מנהל תיקים בבית המשפט. אבל מי לימד אותך איך לנהל אותם נכון?"</li>
+</ul>
 
-<h2>6. בדיקה לפני שמפעילים קמפיין</h2>
-<div class="box">הקמפיין עולה ביום ראשון, 1.11. אנחנו צריכים את כל הבדיקות האלה עד יום חמישי, 29.10.</div>
-<ul class="check">
-<li>הדף נראה כמו בקישור, במחשב ובנייד, בלי גלילה הצידה</li>
+<h2>5. בדיקה עד יום חמישי 29.10 (הקמפיין עולה ביום ראשון 1.11)</h2>
+<ul>
+<li>הדף נראה כמו בקישור, במחשב ובנייד</li>
 <li>כל הכפתורים גוללים לטופס</li>
-<li>ליד ניסיון: מגיע לשי במייל, עם כל השדות</li>
-<li>אחרי שליחה, הדף עובר לדף התודה</li>
-<li>ב-Meta Events Manager ← Test Events: מופיעים PageView ו-Lead, <strong>כל אחד פעם אחת בלבד</strong></li>
-<li>תיבת ההסכמה לא מסומנת מראש, ובלי לסמן אותה אי אפשר לשלוח</li>
-<li>הקישורים למדיניות הפרטיות ולהצהרת הנגישות בתחתית הדף עובדים</li>
+<li>ליד ניסיון: מגיע לשי במייל, ועובר לעמוד התודה</li>
+<li>Meta Events Manager ← Test Events: מופיעים PageView ו-Lead, <strong>כל אחד פעם אחת</strong></li>
+<li>הקישורים לפרטיות ולנגישות עובדים</li>
 </ul>
 
 <h2>מה לא לשנות</h2>
-<p>הטקסטים, העדויות והעיצוב אושרו על ידי שי. אין להוסיף מחיר לדף. כל שינוי בתוכן עובר דרך יובל.</p>
+<p>הטקסטים, העדויות והעיצוב אושרו על ידי שי. אין להוסיף מחיר. כל שינוי בתוכן עובר דרך יובל.</p>
 </main>
 </body>
 </html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>הטמעת דף ליטיגטור בוורדפרס</title>
+<style>
+:root{--ink:#16202E;--muted:#4A5566;--line:#DDE2EA;--gold:#B37A1A;--soft:#FBF4E6;--code:#F2F4F7}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+main{max-width:820px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:30px;line-height:1.2;margin:0 0 6px}
+h2{font-size:22px;margin:36px 0 10px;padding-top:18px;border-top:1px solid var(--line)}
+p,li{color:var(--muted)} strong{color:var(--ink)}
+.box{background:var(--soft);border-right:4px solid var(--gold);padding:14px 18px;border-radius:6px;margin:16px 0}
+code{background:var(--code);padding:1px 6px;border-radius:4px;font-size:15px;direction:ltr;unicode-bidi:embed}
+pre{background:var(--code);padding:14px 16px;border-radius:8px;overflow-x:auto;direction:ltr;text-align:left;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:right;vertical-align:top} th{background:var(--code)}
+li{margin-bottom:6px}
+</style>
+</head>
+<body>
+<main>
+<h1>הטמעת דף הנחיתה "ליטיגטור" בוורדפרס (Elementor)</h1>
+<p><strong>ככה הדף צריך להיראות:</strong> <a href="https://reshef-landing-production-05c1.up.railway.app/">https://reshef-landing-production-05c1.up.railway.app/</a></p>
+<div class="box">הדף מגיע כתבנית Elementor מוכנה, עם התמונות בפנים. כל מה שנשאר זה לייבא את התבנית, לשים את הטופס של האתר ולבדוק. בערך 30 דקות עבודה.</div>
+
+<h2>הקבצים</h2>
+<ul>
+<li><code>litigator-elementor.json</code>: דף הנחיתה</li>
+<li><code>litigator-thanks-elementor.json</code>: דף התודה. הוא כבר כולל את אירוע ה-Lead לפיקסל</li>
+<li><code>og.jpg</code>: תמונת השיתוף לוואטסאפ ולפייסבוק</li>
+</ul>
+
+<h2>1. ייבוא</h2>
+<ol>
+<li>Templates ← Saved Templates ← <strong>Import Templates</strong>, ומייבאים את שני קבצי ה-JSON.</li>
+<li>יוצרים שני עמודים, למשל <code>/litigator</code> ו-<code>/litigator-thanks</code>. בכל אחד: Edit with Elementor ← אייקון התיקייה ← My Templates ← <strong>Insert</strong> את התבנית המתאימה.</li>
+<li>Page Settings ← Page Layout: <strong>Elementor Canvas</strong>. לדף יש header ו-footer משלו.</li>
+<li>לעמוד התודה: noindex בהגדרות ה-SEO.</li>
+</ol>
+
+<h2>2. הטופס</h2>
+<p>בסקשן הטופס, בעמודה השמאלית, יש ווידג'ט Shortcode עם הטקסט "להחליף בטופס של האתר". מחליפים אותו בטופס של האתר (Elementor Form, או shortcode של CF7 וכו'). <strong>לא</strong> מוחקים את הסקשן ולא משנים לו את ה-ID <code>form</code>: כל הכפתורים בדף מובילים אליו.</p>
+<table>
+<tr><th>שדה</th><th>סוג</th><th>הערות</th></tr>
+<tr><td>שם מלא</td><td>טקסט, חובה</td><td></td></tr>
+<tr><td>טלפון נייד</td><td>טלפון, חובה</td><td></td></tr>
+<tr><td>אימייל</td><td>אימייל, חובה</td><td></td></tr>
+<tr><td>ותק</td><td>בחירה, חובה</td><td>מתמחה · עד שנה · 1–3 שנים · 3–5 שנים · מעל 5 שנים</td></tr>
+<tr><td>תחום עיקרי</td><td>בחירה, חובה</td><td>אזרחי / מסחרי · משפחה · עבודה · מקרקעין · אחר</td></tr>
+<tr><td>הסכמה לדיוור</td><td>תיבת סימון, חובה</td><td><strong>לא מסומנת מראש.</strong> נוסח: "אני מאשר/ת לקבל עדכונים במייל, בוואטסאפ וב־SMS, וקראתי את <a>מדיניות הפרטיות</a>. אפשר להסיר בכל עת." עם קישור למדיניות הפרטיות של האתר</td></tr>
+</table>
+<p><strong>כפתור:</strong> "אני רוצה לקבל פרטים". <strong>אחרי שליחה:</strong> מייל לשי עם כל השדות, והפניה לעמוד התודה (<code>/litigator-thanks</code>).</p>
+
+<h2>3. פיקסל ואירוע Lead</h2>
+<ul>
+<li>הפיקסל של האתר כבר נטען בעמוד. לא מוסיפים פיקסל.</li>
+<li>אירוע ה-<strong>Lead</strong> נשלח אוטומטית מעמוד התודה, כי הוא כבר בתבנית. לכן חשוב שרק שליחה מוצלחת של הטופס תוביל לעמוד הזה.</li>
+</ul>
+
+<h2>4. קישורים ותמונת שיתוף</h2>
+<ul>
+<li>בתחתית הדף יש קישורים ל-<code>/privacy-policy/</code> ול-<code>/accessibility-statement/</code>. אם הכתובות באתר שונות, מעדכנים בווידג'ט ה-HTML התחתון.</li>
+<li>בהגדרות ה-SEO של העמוד: תמונת שיתוף <code>og.jpg</code>, וכותרת: "כבר מנהל תיקים בבית המשפט. אבל מי לימד אותך איך לנהל אותם נכון?"</li>
+</ul>
+
+<h2>5. בדיקה עד יום חמישי 29.10 (הקמפיין עולה ביום ראשון 1.11)</h2>
+<ul>
+<li>הדף נראה כמו בקישור, במחשב ובנייד</li>
+<li>כל הכפתורים גוללים לטופס</li>
+<li>ליד ניסיון: מגיע לשי במייל, ועובר לעמוד התודה</li>
+<li>Meta Events Manager ← Test Events: מופיעים PageView ו-Lead, <strong>כל אחד פעם אחת</strong></li>
+<li>הקישורים לפרטיות ולנגישות עובדים</li>
+</ul>
+
+<h2>מה לא לשנות</h2>
+<p>הטקסטים, העדויות והעיצוב אושרו על ידי שי. אין להוסיף מחיר. כל שינוי בתוכן עובר דרך יובל.</p>
+</main>
+</body>
+</html>
