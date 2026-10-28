@@ -17,7 +17,7 @@
 <script>
 /* ============ הגדרות – למלא לפני עלייה לאוויר ============ */
 window.LP_CONFIG = {
-  webhookUrl: "",        // כתובת Google Apps Script / Make / Zapier שמקבלת את הלידים
+  leadEmail: "",         // לאן נשלחים הלידים (במייל, דרך FormSubmit). בשליחה הראשונה מגיע מייל אישור: ללחוץ Activate
   metaPixelId: "270858613981499",       // מזהה הפיקסל של מטא (מספר)
   thankYouUrl: "thanks.html"
 };
@@ -519,16 +519,6 @@ footer nav{display:flex;gap:18px}
 
 <script>
 (function(){
-  // --- UTM / מקור התנועה ---
-  var qs = new URLSearchParams(location.search);
-  var keys = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid"];
-  var attribution = {};
-  try {
-    var saved = JSON.parse(sessionStorage.getItem("lp_attr") || "{}");
-    keys.forEach(function(k){ attribution[k] = qs.get(k) || saved[k] || ""; });
-    sessionStorage.setItem("lp_attr", JSON.stringify(attribution));
-  } catch(e){ keys.forEach(function(k){ attribution[k] = qs.get(k) || ""; }); }
-
   // --- מעקב לחיצות על CTA ---
   document.querySelectorAll("[data-cta]").forEach(function(a){
     a.addEventListener("click", function(){ fbq("trackCustom","CTAClick",{position:a.dataset.cta}); });
@@ -566,23 +556,24 @@ footer nav{display:flex;gap:18px}
 
     btn.disabled = true; btn.textContent = "שולח…";
     var eventId = "lead_" + Date.now() + "_" + Math.random().toString(36).slice(2,8);
-    var payload = Object.assign({
-      name: form.name.value.trim(), phone: phone, email: form.email.value.trim(),
-      years: form.years.value, practice: form.practice.value, consent: "yes",
-      page: location.href.split("?")[0], referrer: document.referrer,
-      submitted_at: new Date().toISOString(), event_id: eventId
-    }, attribution);
+    var payload = {
+      "שם": form.name.value.trim(), "טלפון": phone, "אימייל": form.email.value.trim(),
+      "ותק": form.years.value, "תחום": form.practice.value, "אישור דיוור": "כן",
+      _subject: "ליד חדש – קורס ליטיגטור: " + form.name.value.trim(),
+      _template: "table", _captcha: "false"
+    };
 
     var done = function(){
       fbq("track","Lead",{content_name:"litigation-course-waitlist"},{eventID:eventId});
       setTimeout(function(){ location.href = window.LP_CONFIG.thankYouUrl; }, 300);
     };
-    var url = window.LP_CONFIG.webhookUrl;
-    if (!url) { console.warn("LP_CONFIG.webhookUrl לא מוגדר – הליד לא נשמר", payload); done(); return; }
-    // text/plain מונע preflight של CORS – עובד עם Google Apps Script
-    fetch(url, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(payload)})
-      .then(done)
-      .catch(function(){ btn.disabled = false; btn.textContent = "אני רוצה לקבל פרטים"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); });
+    var fail = function(){ btn.disabled = false; btn.textContent = "אני רוצה לקבל פרטים"; alert("משהו השתבש בשליחה. נסו שוב בעוד רגע."); };
+    var to = window.LP_CONFIG.leadEmail;
+    if (!to) { console.warn("LP_CONFIG.leadEmail לא מוגדר – הליד לא נשלח", payload); done(); return; }
+    fetch("https://formsubmit.co/ajax/" + encodeURIComponent(to), {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body: JSON.stringify(payload)})
+      .then(function(r){ return r.json(); })
+      .then(function(d){ (d && (d.success === true || d.success === "true")) ? done() : fail(); })
+      .catch(fail);
   });
 
   ["input","change"].forEach(function(t){ form.addEventListener(t, function(e){ var f = e.target.closest(".field"); if (f) f.classList.remove("err"); if (e.target.id==="f-consent") document.getElementById("consent-wrap").classList.remove("err"); }); });

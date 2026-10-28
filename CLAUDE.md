@@ -45,9 +45,9 @@
 
 ## מבנה הקבצים
 - `index.html`: הדף כולו. CSS ו-JS בתוך הקובץ, בלי build.
-  - `window.LP_CONFIG` בראש הקובץ: `webhookUrl`, `metaPixelId`, `thankYouUrl`
-  - הטופס שולח JSON (text/plain, no-cors) ל-webhook, יורה `fbq('track','Lead')` עם eventID ומפנה ל-thanks.html
-  - נשמרים UTM ו-fbclid (sessionStorage)
+  - `window.LP_CONFIG` בראש הקובץ: `leadEmail`, `metaPixelId`, `thankYouUrl`
+  - **הטופס שולח את הליד במייל דרך FormSubmit** (`formsubmit.co/ajax/<leadEmail>`, בלי חשבון). בשליחה הראשונה נשלח מייל אישור לכתובת: ללחוץ Activate. אחרי הצלחה: `fbq('track','Lead')` + הפניה ל-thanks.html
+  - **UTM הוסר** לבקשת יובל (פשטות). לא להחזיר בלי לשאול
   - אירועים מותאמים: `CTAClick` (עם position) ו-`FormStart`
   - honeypot בשם `company`
   - תמונות: `images/*.jpg`. אם קובץ חסר, מוצג placeholder (`.ph` עם data-label)
@@ -60,12 +60,11 @@
 - [x] שם ולוגו **לדוגמה**: "ליטיגטור · קורס ליטיגציה מעשית", סמל עמוד בזהב (`images/logo.svg`, וגם inline ב-header). לאישור סופי של יובל ושי
 - [x] תמונות: shai-hero.jpg, shai-portrait.jpg (נוצרו בג'ימיני, צריך אישור של שי), og.jpg (כולל טקסט, נוצר מ-HTML)
 - [x] ציטוט של שי: "ליטיגטור מנוסה הוא לא מי שיודע יותר חוק…" (אושר ע"י יובל, בלי הערת "לדוגמה"). ייתכן עדכון בהמשך
-- [ ] חיבור הטופס: **שי מטפל**. כשיש כתובת webhook, להכניס ל-`LP_CONFIG.webhookUrl`
+- [ ] חיבור הטופס: מייל דרך FormSubmit. חסר: כתובת המייל ל-`LP_CONFIG.leadEmail` + לחיצה על Activate
 - [x] פיקסל: 270858613981499 (הפיקסל הקיים של האתר של שי), ב-`LP_CONFIG.metaPixelId`
 - [x] המלצות: 3 עדויות אמיתיות. 2 ממשתתפי **מחזור ספטמבר 2026**, ואחת של עו"ד עזריה ח.א. (בלי שמות, חתימה "מתוך מחזור ספטמבר 2026"). תוקנו רק שגיאות כתיב והוסרו אימוג'ים
 - [x] ימים ושעות: הוחלט לא לציין, רק "5 מפגשים של שעתיים וחצי"
 - [ ] מיקום מדויק
-- [ ] webhookUrl ו-metaPixelId
 - [ ] פרטים בדפי הפרטיות והנגישות
 - [ ] בדיקה מול כללי לשכת עורכי הדין לגבי פרסום
 
