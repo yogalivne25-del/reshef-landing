@@ -73,12 +73,12 @@
 - **מדד היתכנות:** 40+ לידים = יש היתכנות. פחות מ-20 = אין היתכנות. בין 20 ל-40: להחליט לפי איכות הלידים
 - אחרי הקמפיין יובל מתקשר ל-10 לידים כדי להבין את הכאב האמיתי, ואומר להם שיישלח מייל בימים הקרובים
 - דף עסקי וחשבון מודעות של שי כבר קיימים. הפיקסל: הקיים באתר של שי
-- הדף יוטמע באתר הוורדפרס של שי, **עם הטופס של האתר**. בונה האתרים של שי מטפל (מסמך הנחיות: https://claude.ai/artifact/QYutF2h8oR8RMvanfoX5dX)
+- הדף יוטמע באתר הוורדפרס של שי, **עם הטופס של האתר** (הוראות למפתח: `wordpress-instructions.html`, נכלל ב-zip). הקוד של הדף עובד גם בלי `#lead-form`. בונה האתרים של שי מטפל (מסמך הנחיות: https://claude.ai/artifact/QYutF2h8oR8RMvanfoX5dX)
 - מודעות: יובל מכין בעצמו
 - **יעד עלייה לאוויר: יום ראשון 1.11.2026**
 
 ## העלאה לאוויר
-**Railway** (שירות `reshef-landing`): `package.json` מריץ `serve` על `$PORT`, ו-`railway.json` מגדיר start ו-healthcheck. כל push ל-main מעלה גרסה חדשה.
+**Railway** (שירות `reshef-landing`, כתובת: https://reshef-landing-production-05c1.up.railway.app/): `package.json` מריץ `serve` על `$PORT`, ו-`railway.json` מגדיר start ו-healthcheck. כל push ל-main מעלה גרסה חדשה.
 הדף עצמו סטטי לגמרי. אפשר Netlify Drop (לגרור את התיקייה ל-app.netlify.com/drop), Vercel או GitHub Pages.
 אחרי ההעלאה: לבדוק את הטופס מקצה לקצה (ליד מגיע לגיליון, אירוע Lead נראה ב-Meta Events Manager → Test Events).
 

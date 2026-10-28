@@ -542,6 +542,7 @@ footer nav{display:flex;gap:18px}
 
   // --- טופס ---
   var form = document.getElementById("lead-form"), btn = document.getElementById("submit-btn");
+  if (!form) return; // הטופס הוחלף בטופס של האתר (וורדפרס): שאר הדף ממשיך לעבוד
   var started = false;
   form.addEventListener("focusin", function(){ if(!started){ started = true; fbq("trackCustom","FormStart"); } });
 
