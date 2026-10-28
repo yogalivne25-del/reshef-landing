@@ -44,7 +44,7 @@ ol li,ul li{margin-bottom:6px}
 
 <h2>2. הדבקת הדף</h2>
 <ol>
-<li>מעתיקים מ-<code>index.html</code> את כל מה שבין <code>&lt;head&gt;</code> ל-<code>&lt;/body&gt;</code>, <strong>חוץ מבלוק הפיקסל</strong> (ראו סעיף 4), ומדביקים לבלוק Custom HTML או לווידג'ט HTML של Elementor.</li>
+<li>מעתיקים מ-<code>index.html</code> את כל מה שבין <code>&lt;head&gt;</code> ל-<code>&lt;/body&gt;</code>, <strong>חוץ מבלוק הפיקסל ובלוק <code>LP_CONFIG</code></strong> (ראו סעיף 4), ומדביקים לבלוק Custom HTML או לווידג'ט HTML של Elementor.</li>
 <li>צריך משתמש עם הרשאת <code>unfiltered_html</code> (מנהל), אחרת וורדפרס מוחק את תגי ה-<code>&lt;script&gt;</code>.</li>
 <li>בודקים שהדף נראה כמו בקישור למעלה, במחשב ובנייד.</li>
 </ol>
@@ -65,28 +65,12 @@ ol li,ul li{margin-bottom:6px}
 <tr><td>ותק</td><td>בחירה, חובה</td><td>מתמחה · עד שנה · 1–3 שנים · 3–5 שנים · מעל 5 שנים</td></tr>
 <tr><td>תחום עיקרי</td><td>בחירה, חובה</td><td>אזרחי / מסחרי · משפחה · עבודה · מקרקעין · אחר</td></tr>
 <tr><td>הסכמה לדיוור</td><td>תיבת סימון, חובה</td><td><strong>לא מסומנת מראש</strong> (חוק הספאם). נוסח: "אני מאשר/ת לקבל עדכונים במייל, בוואטסאפ וב־SMS. אפשר להסיר בכל עת."</td></tr>
-<tr><td>utm_source, utm_medium, utm_campaign, utm_content, utm_term, fbclid</td><td>שדות נסתרים</td><td>מקור הקמפיין. חשוב למדידה</td></tr>
 </table>
 <p><strong>כפתור השליחה:</strong> "אני רוצה לקבל פרטים". מתחתיו: "השארת הפרטים אינה מחייבת הרשמה או תשלום."</p>
 
-<h3>מילוי השדות הנסתרים (UTM)</h3>
-<p>הדף שומר את פרמטרי ה-UTM מהכתובת. ב-Elementor אפשר למלא כל שדה נסתר עם Dynamic Tag מסוג Request Parameter. בכל טופס אחר, מדביקים את הקוד הזה מתחת לטופס, והוא ממלא כל שדה ששמו <code>utm_source</code> וכו':</p>
-<pre>&lt;script&gt;
-(function(){
-  var keys=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid"];
-  var qs=new URLSearchParams(location.search), saved={};
-  try{ saved=JSON.parse(sessionStorage.getItem("lp_attr")||"{}"); }catch(e){}
-  keys.forEach(function(k){
-    var v=qs.get(k)||saved[k]||"";
-    document.querySelectorAll('input[name="'+k+'"],input[name="form_fields['+k+']"]')
-      .forEach(function(i){ i.value=v; });
-  });
-})();
-&lt;/script&gt;</pre>
-
 <h3>אחרי שליחה מוצלחת</h3>
 <ol>
-<li><strong>מייל לשי</strong> עם כל השדות, כולל ה-UTM.</li>
+<li><strong>מייל לשי</strong> עם כל השדות.</li>
 <li><strong>שמירה</strong> של כל ליד: Elementor Submissions, Flamingo ל-CF7, או גיליון.</li>
 <li><strong>הפניה לדף תודה:</strong> יוצרים עמוד תודה עם התוכן של <code>thanks.html</code>, ומסמנים אותו noindex.</li>
 <li><strong>אירוע Lead למטא:</strong> הכי פשוט ובטוח זה לשים בדף התודה בלבד:
@@ -104,7 +88,7 @@ document.addEventListener('wpcf7mailsent', function(){
 <h2>4. פיקסל מטא</h2>
 <ul>
 <li>האתר כבר טוען את הפיקסל של שי, ואותו פיקסל ממשיך לשמש את הדף.</li>
-<li>בראש <code>index.html</code> יש בלוק <code>&lt;!-- Meta Pixel --&gt;</code>. <strong>לא מדביקים אותו</strong>, כדי שהפיקסל לא ייטען פעמיים. משאירים את <code>metaPixelId</code> ריק ב-<code>LP_CONFIG</code>.</li>
+<li>בראש <code>index.html</code> יש בלוק <code>&lt;!-- Meta Pixel --&gt;</code> ובלוק <code>LP_CONFIG</code>. <strong>לא מדביקים אותם</strong>: הפיקסל של האתר כבר נטען בעמוד, וכך הוא לא ייטען פעמיים.</li>
 <li>הדף שולח לבד גם אירועים מותאמים דרך הפיקסל של האתר: <code>CTAClick</code> (לחיצה על כפתור) ו-<code>FormStart</code>.</li>
 <li>האירוע שהקמפיין מתבסס עליו הוא <code>Lead</code> (סעיף 3).</li>
 </ul>
@@ -117,7 +101,7 @@ document.addEventListener('wpcf7mailsent', function(){
 <ul class="check">
 <li>הדף נראה כמו בקישור, במחשב ובנייד, בלי גלילה הצידה</li>
 <li>כל הכפתורים גוללים לטופס</li>
-<li>ליד ניסיון דרך הכתובת <code>/litigator/?utm_source=test&amp;utm_campaign=check</code>: מגיע לשי במייל, עם <code>utm_source=test</code></li>
+<li>ליד ניסיון: מגיע לשי במייל, עם כל השדות</li>
 <li>אחרי שליחה, הדף עובר לדף התודה</li>
 <li>ב-Meta Events Manager ← Test Events: מופיעים PageView ו-Lead, <strong>כל אחד פעם אחת בלבד</strong></li>
 <li>תיבת ההסכמה לא מסומנת מראש, ובלי לסמן אותה אי אפשר לשלוח</li>
