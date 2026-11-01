@@ -75,6 +75,7 @@
 - הדף יוטמע באתר הוורדפרס של שי, **עם הטופס של האתר** (חבילה למפתח: תיקיית `wordpress/` — תבניות Elementor ‏`litigator-elementor.json` ו-`litigator-thanks-elementor.json`, נבנות מ-index.html ע"י `python3 wordpress/build_elementor.py`. **אחרי כל שינוי בדף: להריץ מחדש.** Lead נשלח מעמוד התודה). הקוד של הדף עובד גם בלי `#lead-form`. בונה האתרים של שי מטפל (מסמך הנחיות: https://claude.ai/artifact/QYutF2h8oR8RMvanfoX5dX)
 - מודעות: יובל מכין בעצמו
 - **יעד עלייה לאוויר: יום ראשון 1.11.2026**
+- **הדף באוויר:** https://reshef-adv.co.il/let-landing/ (וורדפרס של שי)
 
 ## העלאה לאוויר
 **Railway** (שירות `reshef-landing`, כתובת: https://reshef-landing-production-05c1.up.railway.app/): `package.json` מריץ `serve` על `$PORT`, ו-`railway.json` מגדיר start ו-healthcheck. כל push ל-main מעלה גרסה חדשה.
