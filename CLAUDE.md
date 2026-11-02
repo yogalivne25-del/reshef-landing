@@ -81,7 +81,8 @@
 - [ ] טקסט Advantage+ (AI) שיובל אישר: לבדוק שאין הבטחות/מחיר/"משוב אישי"/"סימולציה"/"צעיר"/מספרים שלא בדף
 - [ ] מיקומים: להחריג Audience Network ברמת החשבון (Ad account settings ← Excluded placements); לבדוק חיתוך פיד 4:5 של הסרטון (כתוביות לא נחתכות)
 - [ ] בכל מודעה: Optimize text per person כבוי, Review defaults (טקסט כבוי), 4 Headlines + Description, משולש אזהרה בתצוגה
-- [ ] מבנה בפועל: 6 אד סטים (מודעה אחת בכל אחד), 3 וידאו + 3 תמונות; תקציב ~35 ₪/יום לאד סט + Campaign spending limit 3,000 ₪
+- [ ] **אד סט 7 "התשתית"**: תמונת ג'ימיני "תשתית חזקה מול חלשה" — כשיובל שולח, להוסיף טקסט: תוויות "תשתית חלשה" / "תשתית חזקה" + כותרת "לא רק חקירות. כל שלבי התיק." + לוגו, בגדלי פיד וסטורי
+- [ ] מבנה בפועל: 7 אד סטים (מודעה אחת בכל אחד; 7 = התשתית), 4 וידאו + 3 תמונות; תקציב ~30–35 ₪/יום לאד סט + Campaign spending limit 3,000 ₪
 
 ## העלאה לאוויר
 **Railway** (שירות `reshef-landing`, כתובת: https://reshef-landing-production-05c1.up.railway.app/): `package.json` מריץ `serve` על `$PORT`, ו-`railway.json` מגדיר start ו-healthcheck. כל push ל-main מעלה גרסה חדשה.
