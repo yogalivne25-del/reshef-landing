@@ -81,7 +81,7 @@
 - [ ] טקסט Advantage+ (AI) שיובל אישר: לבדוק שאין הבטחות/מחיר/"משוב אישי"/"סימולציה"/"צעיר"/מספרים שלא בדף
 - [ ] מיקומים: להחריג Audience Network ברמת החשבון (Ad account settings ← Excluded placements); לבדוק חיתוך פיד 4:5 של הסרטון (כתוביות לא נחתכות)
 - [ ] בכל מודעה: Optimize text per person כבוי, Review defaults (טקסט כבוי), 4 Headlines + Description, משולש אזהרה בתצוגה
-- [x] **אד סט 7 "התשתית"**: תמונה מוכנה עם טקסט (`ads/ad-foundation-feed.jpg`, `ads/ad-foundation-story.jpg`): "החקירה מתחילה הרבה לפני האולם" + תשתית חזקה/חלשה
+- [x] **אד סט 7 "התשתית"**: תמונה מוכנה עם טקסט (`ads/ad-foundation-feed.jpg`, `ads/ad-foundation-story.jpg`): "התיק נבנה הרבה לפני ההוכחות" + תשתית חזקה/חלשה
 - [ ] מבנה בפועל: 7 אד סטים (מודעה אחת בכל אחד; 7 = התשתית), 4 וידאו + 3 תמונות; תקציב ~30–35 ₪/יום לאד סט + Campaign spending limit 3,000 ₪
 
 ## העלאה לאוויר
