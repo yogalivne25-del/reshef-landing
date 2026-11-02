@@ -79,7 +79,7 @@
 
 ## לעבור בסוף הקמת המודעות (בקשת יובל, 1.11)
 - [ ] טקסט Advantage+ (AI) שיובל אישר: לבדוק שאין הבטחות/מחיר/"משוב אישי"/"סימולציה"/"צעיר"/מספרים שלא בדף
-- [ ] מיקומים: להחריג Audience Network ברמת החשבון (Ad account settings ← Excluded placements); לבדוק חיתוך פיד 4:5 של הסרטון (כתוביות לא נחתכות)
+- [x] מיקומים: הוחרגו ברמת החשבון (Account controls ← Placement controls): Audience Network, Marketplace, Right column. [ ] עוד לבדוק חיתוך פיד 4:5 של הסרטון (כתוביות לא נחתכות)
 - [ ] בכל מודעה: Optimize text per person כבוי, Review defaults (טקסט כבוי), 4 Headlines + Description, משולש אזהרה בתצוגה
 - [x] **אד סט 7 "התשתית"**: תמונה מוכנה עם טקסט (`ads/ad-foundation-feed.jpg`, `ads/ad-foundation-story.jpg`): "התיק נקבע הרבה לפני ההוכחות" + תשתית חזקה/חלשה
 - [ ] מבנה בפועל: 7 אד סטים (מודעה אחת בכל אחד; 7 = התשתית), 4 וידאו + 3 תמונות; תקציב ~30–35 ₪/יום לאד סט + Campaign spending limit 3,000 ₪
