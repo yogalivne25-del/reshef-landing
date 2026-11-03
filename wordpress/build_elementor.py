@@ -71,7 +71,10 @@ t_head_links = '\n'.join(re.findall(r'<link [^>]*>', t))
 t_css = re.search(r'<style>(.*?)</style>', t, re.S).group(1).replace('body{', '.lp-thanks{')
 t_body = t[t.index('<body>')+6 : t.index('</body>')]
 thanks_html = (t_head_links + '\n<style>' + t_css + '</style>\n<div class="lp-thanks">' + t_body + '</div>\n'
-               "<script>if (window.fbq) fbq('track','Lead');</script>")
+               "<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};"
+               "if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;"
+               "s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');"
+               "fbq('init','270858613981499');fbq('trackSingle','270858613981499','Lead');</script>")
 thanks = {"version": "0.4", "title": "ליטיגטור – דף תודה", "type": "page",
   "page_settings": {"template": "elementor_canvas", "hide_title": "yes"},
   "content": [section([column(100, [html_widget(thanks_html)])], **full)]}
